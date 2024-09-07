@@ -1,0 +1,364 @@
+.box {
+  position: absolute;
+  width: 35vw; /* Relative to the viewport width */
+  height: 35vh; /* Relative to the viewport height */
+}
+
+/* Pink Group */
+.box .group {
+  position: absolute;
+  width: 35vw; /* Same as .box width */
+  height: 35vh; /* Same as .box height */
+  top: -100%; /* Leave as percentage if based on the container */
+  left: -50%; /* Leave as percentage if based on the container */
+}
+
+.box .ellipse-wrapper {
+  position: absolute;
+  height: 35vh;
+  background-color: var(--colors-pinky);
+  border-width: 15vw 14vh; /* Adjusted to use vw and vh units */
+  box-shadow: 0 0 3vw var(--colors-pinky), 
+              0 0 6vw var(--colors-pinky), 
+              0 0 10vw var(--colors-pinky),
+              0 0 20vw var(--colors-pinky), 
+              0 0 35vw var(--colors-pinky), 
+              0 0 60vw var(--colors-pinky);
+}
+
+.box .ellipse {
+  position: absolute;
+  width: 35vw;
+  height: 35vh;
+  background-color: var(--colors-pinky);
+  border-width: 15vw 14vh;
+  box-shadow: 0 0 3vw var(--colors-pinky), 
+              0 0 6vw var(--colors-pinky), 
+              0 0 10vw var(--colors-pinky),
+              0 0 20vw var(--colors-pinky), 
+              0 0 35vw var(--colors-pinky), 
+              0 0 60vw var(--colors-pinky);
+}
+
+/* Blue Group */
+.box .groupb {
+  position: absolute;
+  width: 35vw;
+  height: 35vh;
+  top: 300%;
+  left: 0%;
+}
+
+.box .ellipse-wrapperb {
+  position: absolute;
+  height: 35vh;
+  background-color: var(--colors-cyan);
+  border-width: 15vw 14vh;
+  box-shadow: 0 0 3vw var(--colors-cyan), 
+              0 0 6vw var(--colors-cyan), 
+              0 0 10vw var(--colors-cyan),
+              0 0 20vw var(--colors-cyan), 
+              0 0 35vw var(--colors-cyan), 
+              0 0 60vw var(--colors-cyan);
+}
+
+.box .ellipseb {
+  position: absolute;
+  width: 35vw;
+  height: 35vh;
+  background-color: var(--colors-cyan);
+  border-width: 15vw 14vh;
+  box-shadow: 0 0 3vw var(--colors-cyan), 
+              0 0 6vw var(--colors-cyan), 
+              0 0 10vw var(--colors-cyan),
+              0 0 20vw var(--colors-cyan), 
+              0 0 35vw var(--colors-cyan), 
+              0 0 60vw var(--colors-cyan);
+}
+
+/* General Navbar Styling */
+.navbar-custom {
+  padding-top: 1.5vh; /* Adjusted for viewport height */
+}
+
+/* Left Logo Styling */
+.left-logo {
+  margin-right: 2vh;
+  margin-top: 1.5vh;
+}
+
+/* Right Logo Styling */
+.right-logo {
+  margin-left: 2vh;
+  margin-top: 1.5vh;
+}
+
+body {
+  background-color: #1b0236 !important;
+  overflow: hidden;
+  font-family: "Abril Fatface-Regular", Helvetica;
+  font-size: 1.5rem; /* Base font size for scaling */
+}
+
+h1 {
+  font-size: 2vw; /* Adjusted to scale with viewport width */
+}
+
+p {
+  font-family: "Abel-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 2vw; /* Adjusted to scale with viewport width */
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.play-button {
+  width: auto;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  position: relative;
+}
+
+.play-button img {
+  display: block;
+  width: 20vw; /* Adjust the size to be responsive to viewport width */
+  height: auto; /* Keep aspect ratio */
+}
+
+
+.play-button span {
+  font-size: 2vw; /* Adjusted to scale with viewport width */
+  color: black;
+  letter-spacing: 0;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+
+/* .main-content {
+  height: 100vh;
+  display: flex;
+}
+
+.text-section, .image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.text-section h1 {
+  margin-bottom: 20px;
+}
+
+.text-section .btn {
+  font-size: 18px;
+}
+
+.image-section img {
+  width: 100%;
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+} */
+
+
+
+/* 
+.frame {
+  background-color: #1b0236; */
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100% !important; */
+/* } */
+
+/* 
+.frame .div {
+  background-color: #1a0234;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.frame .overlap {
+  position: absolute;
+  width: 1986px;
+  height: 1468px;
+  top: -523px;
+  left: -431px;
+}
+.frame .img {
+  position: absolute;
+  width: 49px;
+  height: 18px;
+  top: 574px;
+  left: 1884px;
+} 
+
+.frame .img-2 {
+  position: absolute;
+  width: 1537px;
+  height: 945px;
+  top: 523px;
+  left: 449px;
+}
+
+.frame .vector {
+  position: absolute;
+  width: 981px;
+  height: 136px;
+  top: 1333px;
+  left: 1005px;
+}
+
+.frame .vector-2 {
+  position: absolute;
+  width: 1136px;
+  height: 945px;
+  top: 523px;
+  left: 850px;
+}
+
+.frame .subtract {
+  position: absolute;
+  width: 944px;
+  height: 934px;
+  top: 523px;
+  left: 1041px;
+  object-fit: cover;
+} */
+/* 
+.frame .group {
+  position: absolute;
+  width: 558px;
+  height: 555px;
+  top: 0;
+  left: 0;
+}
+
+.frame .ellipse-wrapper {
+  height: 555px;
+  background-color: #d505ff;
+  border-radius: 278.91px/277.68px;
+  box-shadow: 0px 0px 50.2px #d505ff, 0px 0px 100.41px #d505ff, 0px 0px 351.43px #d505ff, 0px 0px 702.86px #d505ff,
+    0px 0px 1204.9px #d505ff, 0px 0px 2108.58px #d505ff;
+}
+
+.frame .ellipse {
+  width: 558px;
+  height: 555px;
+  background-color: #d505ff;
+  border-radius: 278.91px/277.68px;
+  box-shadow: 0px 0px 50.2px #d505ff, 0px 0px 100.41px #d505ff, 0px 0px 351.43px #d505ff, 0px 0px 702.86px #d505ff,
+    0px 0px 1204.9px #d505ff, 0px 0px 2108.58px #d505ff;
+}
+
+.frame .logo {
+  position: absolute;
+  width: 75px;
+  height: 36px;
+  top: 566px;
+  left: 483px;
+}
+
+.frame .PING-PONG-wrapper {
+  position: absolute;
+  width: 311px;
+  height: 190px;
+  top: 693px;
+  left: 521px;
+}
+
+.frame .PING-PONG {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  font-family: "Abril Fatface", Helvetica;
+  font-weight: 400;
+  color: #00dff8;
+  font-size: 78.6px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .overlap-group-wrapper {
+  position: absolute;
+  width: 363px;
+  height: 159px;
+  top: 1156px;
+  left: 513px;
+}
+
+.frame .overlap-group {
+  position: relative;
+  width: 348px;
+  height: 95px;
+  top: 52px;
+  left: 15px;
+  background-image: url(./img/vector-1.svg);
+  background-size: 100% 100%;
+}
+
+.frame .text-wrapper {
+  position: absolute;
+  width: 286px;
+  top: 29px;
+  left: 31px;
+  font-family: "Abyssinica SIL", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 30.7px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.frame .lorem-ipsum-is {
+  position: absolute;
+  width: 539px;
+  top: 897px;
+  left: 516px;
+  font-family: "Abel", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 32.6px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .overlap-2 {
+  position: absolute;
+  width: 688px;
+  height: 692px;
+  top: 974px;
+  left: -424px;
+}
+
+.frame .ellipse-2 {
+  position: absolute;
+  width: 590px;
+  height: 612px;
+  top: 0;
+  left: 98px;
+  background-color: #00e0f7;
+  border-radius: 294.89px/305.94px;
+  box-shadow: 0px 0px 55.07px #00e0f7, 0px 0px 110.14px #00e0f7, 0px 0px 385.49px #00e0f7, 0px 0px 770.98px #00e0f7,
+    0px 0px 1321.67px #00e0f7, 0px 0px 2312.93px #00e0f7;
+}
+
+.frame .ellipse-3 {
+  position: absolute;
+  width: 590px;
+  height: 612px;
+  top: 80px;
+  left: 0;
+  background-color: #00e0f7;
+  border-radius: 294.89px/305.94px;
+  box-shadow: 0px 0px 55.07px #00e0f7, 0px 0px 110.14px #00e0f7, 0px 0px 385.49px #00e0f7, 0px 0px 770.98px #00e0f7,
+    0px 0px 1321.67px #00e0f7, 0px 0px 2312.93px #00e0f7;
+} */
