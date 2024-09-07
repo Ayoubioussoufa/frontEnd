@@ -1,3 +1,344 @@
-body {
-    background-color: green;
+.no-scroll {
+    overflow: hidden;
 }
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: linear-gradient(to right, #b0e9f5 , #EDC0E6);
+    font-family:'Luminari';
+}
+
+@font-face {
+    font-family: 'Luminari';
+    src: url('../luminari-cdnfonts/Luminari-Regular.ttf');
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/prestige-ocean-song-seraphine-league-of-legneds-4k-8y-1920x1080.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.image {
+    display: block;
+    width: 40px;
+    height: auto;
+}
+
+.play {
+    position: absolute;
+    left: 80%;
+    top: 75%;
+    display: block;
+    width: 190px;
+    height: auto;
+    z-index: 1;
+}
+/*------------------------------*/
+
+.show-conversation .conversation {
+    display: block;
+}
+
+.contain {
+    display: flex;
+    align-items: flex-start;
+    position: relative; /* Make contain relative for positioning conversation */
+  }
+  
+  .friend-list, .conversation {
+    width: 435px;
+    height: 600px;
+    margin: 150px 0px 0px 33px;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 30px 40px;
+    z-index: 1;
+  }
+  
+  .friend-list {
+    margin-right: -10px; /* Space between friend list and conversation */
+  }
+  
+  .friend {
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.01);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: white;
+  }
+  
+  .friend:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  .conversation {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+  
+  .friend-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: white;
+  }
+  
+  .friend-list-header .actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .friend-list-header .btn {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    color: white;
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+  
+  .friend-list-header .btn:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .search-bar, .add-friend-bar {
+    display: none;
+    margin-bottom: 20px;
+  }
+  
+  /* Custom scrollbar */
+  .friend-list {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.4) rgba(0, 0, 0, 0.1);
+  }
+  
+  .friend-list::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .friend-list::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+  }
+  
+  .friend-list::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .toggle-btn {
+    display: none; /* Hide the toggle button by default */
+  }
+  
+/* ------------------------------------------------------------------------------*/
+
+.bubble {
+    position: absolute;
+    bottom: -100px;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, rgba(255,255,255,0.5) 0%, rgba(173,216,230,0.3) 40%, rgba(173,216,230,0.2) 60%, rgba(255,255,255,0.1) 100%);
+    border-radius: 85% 75% 78% 73%;
+    opacity: 0;
+    animation: rise 10s infinite, size 10s infinite, rotate 10s linear infinite;
+}
+
+@keyframes rise {
+    0% {
+        bottom: -100px;
+        opacity: 1;
+    }
+    100% {
+        bottom: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes size {
+    0% {
+        width: 20px;
+        height: 20px;
+    }
+    100% {
+        width: 50px;
+        height: 50px;
+    }
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.Text {
+    display: block;
+    position: absolute;
+    top: 35%;
+    left: 26%;
+    width: auto; /* Allow width to adjust automatically */
+    max-width: 600px; /* Set a maximum width */
+    color: white;
+    z-index: 0;
+    font-size: 14vw; /* Adjust font size relative to viewport width */
+}
+
+.Title {
+    font-size: 34px;
+}
+
+.fonts {
+    font-size: 20px;
+    font-weight: bold;
+    color: #DED7C2;
+    text-shadow: 
+        -1px -1px 0 #5c8795,  
+         1px -1px 0 #5c8795,
+        -1px  1px 0 #5c8795,
+         1px  1px 0 #5c8795;
+}
+
+.navbar {
+    height: 120px !important;
+    /* background-color: transparent; */
+}
+
+.navbar .image {
+    height: 40px !important;
+    margin-right: 20px !important;
+}
+
+.user {
+    margin-left: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+.navbar .container-fluid {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    height: 100% !important;
+}
+
+.navbar .navbar-toggler {
+    order: 0 !important;
+    margin-right: 20px !important;
+}
+
+.navbar .sidebar .offcanvas-header .image {
+    height: 40px !important;
+}
+
+.navbar .sidebar .offcanvas-body .nav-link {
+    color: #EBE7D4 !important;
+    padding: 10px !important;
+    margin: 10px;
+}
+
+.navbar .sidebar .offcanvas-body .nav-link:hover {
+    background-color: #5c8795 !important;
+    border-radius: 5px !important;
+}
+
+.navbar .user {
+    background: none !important;
+    border: none !important;
+}
+
+.navbar .user .customBack {
+    /* background-color: #007bff !important; */
+    color: #EBE7D4 !important;
+    font-weight: bold !important;
+    border: none !important;
+}
+
+@media (max-width: 991px) {
+    .offcanvas-body, .offcanvas-header  {
+        background-color: #EBE7D4;
+    }
+}
+
+@media (max-width: 989px) {
+    .contain {
+      flex-direction: column;
+    }
+    
+    .friend-list, .conversation {
+      width: calc(100% - 66px);
+      margin: 20px 0;
+    }
+
+    .toggle-btn {
+      display: block;
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 3;
+    }
+
+    .Text {
+        display: none;
+    }
+
+    .play {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+      }
+  }
+  
+  @media (min-width: 990px) {
+    .contain {
+      flex-direction: row;
+    }
+
+    .friend-list {
+        display: block;
+    }
+    
+    .conversation {
+      /* display: block; */
+      position: static; /* Reset positioning */
+    }
+    
+    .toggle-btn {
+      display: none;
+    }
+
+    .Text {
+        font-size: 3vw;
+        left: 30%;
+      }
+}
+
+
+@media (max-width: 1585px) {
+    .Text {
+      display: none;
+    }
+  }

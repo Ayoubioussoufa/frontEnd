@@ -87,21 +87,22 @@ document.addEventListener('DOMContentLoaded', function () {
           contentDiv.innerHTML = '<h1>404 Page Not Found</h1>';
         });
     }
+    
   // Remove existing script if necessary
-  const existingScript = document.getElementById('dynamic-script');
-  if (existingScript) {
-    existingScript.remove(); // Remove the old script
-  }
+    const existingScript = document.getElementById('dynamic-script');
+    if (existingScript) {
+      existingScript.remove(); // Remove the old script
+    }
 
-  // Dynamically load JavaScript
-  const script = document.createElement('script');
-  script.src = `src/js/${page}.js`; // Dynamic JS based on page
-  script.id = 'dynamic-script'; // Assign an ID to the script tag for future removal
-  document.body.appendChild(script);
+    // Dynamically load JavaScript
+    const script = document.createElement('script');
+    script.src = `src/js/${page}.js`; // Dynamic JS based on page
+    script.id = 'dynamic-script'; // Assign an ID to the script tag for future removal
+    document.body.appendChild(script);
   
-  window.addEventListener('popstate', (event) => {
-    const page = window.location.hash.slice(1) || 'landing';
-    loadPage(page);
+    window.addEventListener('popstate', (event) => {
+      const page = window.location.hash.slice(1) || 'landing';
+      loadPage(page);
   });
 }
 });
