@@ -14,13 +14,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Function to load page content dynamically
   function loadPage(page) {
-    const navbar = `
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="nav-link" href="#home">Home</a>
-        <a class="nav-link" href="#leaderboard">Leaderboard</a>
-        <a class="nav-link" href="#about">About us</a>
-      </nav>
-    `;
+    // const navbar = `
+    //   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    //     <a class="nav-link" href="#home">Home</a>
+    //     <a class="nav-link" href="#leaderboard">Leaderboard</a>
+    //     <a class="nav-link" href="#about">About us</a>
+    //   </nav>
+    // `;
 
     // Remove any previously added CSS files for pages
     const existingLink = document.getElementById('page-style');
@@ -81,13 +81,14 @@ document.addEventListener('DOMContentLoaded', function () {
           return response.text();
         })
         .then(html => {
-          contentDiv.innerHTML = `${navbar}${html}`;
+          console.log(html);
+          contentDiv.innerHTML = `${html}`;
         })
         .catch(error => {
           contentDiv.innerHTML = '<h1>404 Page Not Found</h1>';
         });
     }
-    
+
   // Remove existing script if necessary
     const existingScript = document.getElementById('dynamic-script');
     if (existingScript) {
