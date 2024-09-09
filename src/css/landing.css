@@ -174,8 +174,11 @@ p {
 }
 
 .bottom {
-  /* bottom: -10%; */
   left: 51%;
   transform: translateX(-50%);
   top: 83%;
+}
+
+#startButton {
+  z-index: 5;
 }
