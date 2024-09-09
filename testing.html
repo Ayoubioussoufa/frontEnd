@@ -35,72 +35,89 @@
                       </g>
                   </svg>
               </a> -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-    .image-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative; /* Important for positioning the circles relative to the image */
-        height: 100vh; /* Full viewport height */
-        width: 100%;  /* Full width of the screen */
+              <!DOCTYPE html>
+              <html lang="en">
+              <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Consistent Image Positioning</title>
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+                <style>
+                  /* Container for images */
+/* Container for images */
+.image-container {
+    position: relative; /* Positioning context for absolute elements */
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Main Image */
+  .main-image {
+    position: relative;
+    z-index: 1; /* Keep this on top */
+    max-width: 80%; /* Adjust based on design needs */
+    height: auto;
+  }
+  
+  /* Overlay Images */
+  .overlay-image {
+    position: absolute; /* Positioned relative to .image-container */
+    z-index: 0; /* Behind the main image */
+    width: 100px; /* Fixed size for small images */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Top Overlay Image */
+  .top {
+    top: 5%; /* Positioning from the top of the container */
+    left: 10%; /* Positioning from the left of the container */
+  }
+  
+  /* Middle Overlay Image */
+  .middle {
+    top: 50%; /* Positioning from the top of the container */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Centered horizontally */
+  }
+  
+  /* Bottom Overlay Image */
+  .bottom {
+    bottom: 5%; /* Positioning from the bottom of the container */
+    right: 10%; /* Positioning from the right of the container */
+  }
+  
+  /* Hide images on small screens */
+  @media (max-width: 767.98px) {
+    .overlay-image {
+      display: none; /* Hide images on small screens */
     }
-    
-    .main-image {
-        position: relative;
-        z-index: 1; /* Ensure the image stays on top */
-        max-width: 200px; /* Control the image size */
-        height: auto;
-    }
-    
-    /* Circle Styles */
-    .circle {
-        position: absolute;
-        border-radius: 50%;
-        border: 5px solid #FF5733; /* Example color for the circles */
-        z-index: 0; /* Ensure circles are behind the image */
-    }
-    
-    /* Specific Circles */
-    .circle1 {
-        width: 300px;
-        height: 300px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(1.2); /* Slightly larger than the image */
-    }
-    
-    .circle2 {
-        width: 400px;
-        height: 400px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(1.5); /* Larger than circle1 */
-    }
-    
-    .circle3 {
-        width: 500px;
-        height: 500px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(1.8); /* Largest circle */
-    }
-    
-
-</style>
-<body>
-    <div class="image-container">
-        <div class="circle circle1"></div>
-        <div class="circle circle2"></div>
-        <div class="circle circle3"></div>
-        <img src="src/assets/landingPage/subtract.png" alt="Centered Image" class="main-image">
-    </div>
-    
-</body>
-</html>
+  }
+  
+                </style>
+              </head>
+              <body>
+                <div class="container-fluid vh-100">
+                  <div class="row h-100">
+                    <!-- Left Section -->
+                    <div class="col-12 col-md-5 d-flex flex-column justify-content-center align-items-center text-center p-3">
+                      <h1 class="mb-5">Main Title</h1>
+                      <p class="mb-5">Some descriptive text goes here.</p>
+                      <button class="btn btn-primary">Call to Action</button>
+                    </div>
+              
+                    <!-- Right Section -->
+                    <div class="col-12 col-md-7 d-flex justify-content-center align-items-center image-container">
+                      <img src="https://via.placeholder.com/300" class="img-fluid main-image" alt="Main Image">
+                      <img src="https://via.placeholder.com/100" class="overlay-image top" alt="Top Image">
+                      <img src="https://via.placeholder.com/100" class="overlay-image middle" alt="Middle Image">
+                      <img src="https://via.placeholder.com/100" class="overlay-image bottom" alt="Bottom Image">
+                    </div>
+                  </div>
+                </div>
+              
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+              </body>
+              </html>
+              

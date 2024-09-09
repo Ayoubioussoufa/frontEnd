@@ -136,52 +136,46 @@ p {
   white-space: nowrap;
 }
 
-.image-container {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  position: relative !important; /* Important for positioning the circles relative to the image */
-  /* height: 100vh !important;
-  width: 100% !important; */
+.relative-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 
 .main-image {
-  position: relative !important;
-  z-index: 1 !important; /* Ensure the image stays on top */
-  max-width: 40vw !important; /* Control the image size */
-  height: auto !important;
-  left: 10%;
-  top: -5%;
+  display: block;
+  width: 60%;
+  height: auto;
+  z-index: 1 !important;
+  transform: translateX(50%);
 }
 
-/* pics Styles */
-.pics {
+.overlay-image {
   position: absolute;
-  z-index: 0;
-  max-width: 100% !important; /* Control the image size */
-  height: auto !important;
-}
-
-/* Specific Circles */
-.middle {
-  z-index: 1; /* Behind the main image */
-  width: 100%; /* Make it bigger */
-  top: -10%; /* Adjust this to move it down */
-  left: 50%; /* Center it horizontally */
-  transform: translateX(-50%); /* Ensure it stays centered */
-}
-
-.bottom {
-  z-index: 2; /* Below the main image */
-  width: 100%; /* Make it a bit bigger */
-  top: 72%; /* Move it slightly up */
-  left: 0%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
 }
 
 .top {
-  width: 100%;
+  top: -10%;
+  left: 31%;
   transform: scale(1.4);
-  z-index: 3;
-  top: 8%;
-  right: 20%;
+  z-index: 2;
+  transform: translateX(-50%) scale(1.4);
+}
+
+.middle {
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bottom {
+  /* bottom: -10%; */
+  left: 51%;
+  transform: translateX(-50%);
+  top: 83%;
 }

@@ -37,6 +37,7 @@
 }
 
 html, body {
+  overflow: hidden;
   margin: 0px;
   height: 100vh;
 }
