@@ -35,166 +35,107 @@
                       </g>
                   </svg>
               </a> -->
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="style.css">
-
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>        <!--https://boxicons.com/ -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">
-    <title>Login & Register Page</title>
-</head>
-
-<body>
-
-    <div class="container" id="container">
-        <div class="form-container sign-up">
-            <form id="signUpForm">
-                <h1>Create Account</h1>
-                <div class="social-icons">
-                    <a href="#" class="icons"><i class='bx bxl-google'></i></a>
-                    <a href="#" class="icons"><i class='bx bxl-facebook'></i></a>
-                    <a href="https://api.intra.42.fr/oauth/authorize?client_id=u-s4t2ud-9e8cb1d6b2b0bb181505b29a9397b6d8e3079ab0fe7be47c059b43e8f4603fcf&redirect_uri=http%3A%2F%2F127.0.0.1%3A5501%2Flwla%2F&response_type=code" class="icons">
-                        <svg class="svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
-                            xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-                            xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="Calque_1" x="0px"
-                            y="0px" viewBox="0 0 137.6 96.599998" enable-background="new 0 0 595.3 841.9" xml:space="preserve"
-                            inkscape:version="0.48.2 r9819" width="100%" height="100%" sodipodi:docname="42_logo.svg"
-                            data-ember-extension="1">
-                            <metadata id="metadata17">
-                                <rdf:RDF>
-                                    <cc:Work rdf:about="">
-                                        <dc:format>image/svg+xml</dc:format>
-                                        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-                                    </cc:Work>
-                                </rdf:RDF>
-                            </metadata>
-                            <defs id="defs15" />
-                            <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10"
-                                gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2"
-                                inkscape:window-width="1060" inkscape:window-height="811" id="namedview13" showgrid="false"
-                                fit-margin-top="0" fit-margin-left="0" fit-margin-right="0" fit-margin-bottom="0"
-                                inkscape:zoom="0.39642998" inkscape:cx="68.450005" inkscape:cy="48.350011"
-                                inkscape:window-x="670" inkscape:window-y="233" inkscape:window-maximized="0"
-                                inkscape:current-layer="Calque_1" />
-                            <g id="g3" transform="translate(-229.2,-372.70002)">
-                                <polygon
-                                    points="229.2,443.9 279.9,443.9 279.9,469.3 305.2,469.3 305.2,423.4 254.6,423.4 305.2,372.7 279.9,372.7 229.2,423.4 "
-                                    id="polygon5" style="fill: #34495E;" />
-                                <polygon points="316.1,398.1 341.4,372.7 316.1,372.7 " id="polygon7" style="fill: #34495E;" />
-                                <polygon
-                                    points="341.4,398.1 316.1,423.4 316.1,448.7 341.4,448.7 341.4,423.4 366.8,398.1 366.8,372.7 341.4,372.7 "
-                                    id="polygon9" style="fill: #34495E;" />
-                                <polygon points="366.8,423.4 341.4,448.7 366.8,448.7 " id="polygon11" style="fill: #34495E;" />
-                            </g>
-                        </svg>
-                    </a>
-                    <a href="#" class="icons"><i class='bx bxl-github'></i></a>
-                    <a href="#" class="icons"><i class='bx bxl-linkedin'></i></a>
-                </div>
-                <div class="input-box">
-                    <input type="email" name="email" placeholder="E-mail">
-                </div>
-                <div class="input-box">
-                    <input type="text" name="loginID" placeholder="LoginID">
-                </div>
-                <div class="input-box">
-                    <input type="password" name="password" id="passW1" class="passwordInput" placeholder="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d{4,}).{6,}$" title="Password must contain at least 1 lowercase letter, 1 uppercase letter, and at least 4 digits. Minimum length: 6 characters." required>
-                    <button type="button" class="passwordToggleBtn" style="border: none; padding: 0; background: none;">
-                        <i class="bi bi-eye-slash" style="color: rgb(0, 0, 0);"></i>
-                    </button>
-                </div>
-                <div class="input-box">
-                    <input type="password" name="passwordC" id="passW2" class="passwordInput" placeholder="Confirm Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d{4,}).{6,}$" title="Password must contain at least 1 lowercase letter, 1 uppercase letter, and at least 4 digits. Minimum length: 6 characters." required>
-                    <button type="button" class="passwordToggleBtn" style="border: none; padding: 0; background: none;">
-                        <i class="bi bi-eye-slash" style="color: rgb(0, 0, 0);"></i>
-                    </button>
-                </div>
-                <button>Sign Up</button>
-            </form>
-        </div>
-
-
-        <div class="form-container sign-in">
-            <form>
-                <h1>Sign In</h1>
-                <div class="social-icons">
-                    <a href="#" class="icons"><i class='bx bxl-google'></i></a>
-                    <a href="#" class="icons"><i class='bx bxl-facebook'></i></a>
-                    <a href="https://api.intra.42.fr/oauth/authorize?client_id=u-s4t2ud-9e8cb1d6b2b0bb181505b29a9397b6d8e3079ab0fe7be47c059b43e8f4603fcf&redirect_uri=http%3A%2F%2F127.0.0.1%3A5501%2Flwla%2F&response_type=code" class="icons">
-                        <svg class="svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
-                            xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-                            xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="Calque_1" x="0px"
-                            y="0px" viewBox="0 0 137.6 96.599998" enable-background="new 0 0 595.3 841.9" xml:space="preserve"
-                            inkscape:version="0.48.2 r9819" width="100%" height="100%" sodipodi:docname="42_logo.svg"
-                            data-ember-extension="1">
-                            <metadata id="metadata17">
-                                <rdf:RDF>
-                                    <cc:Work rdf:about="">
-                                        <dc:format>image/svg+xml</dc:format>
-                                        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-                                    </cc:Work>
-                                </rdf:RDF>
-                            </metadata>
-                            <defs id="defs15" />
-                            <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10"
-                                gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2"
-                                inkscape:window-width="1060" inkscape:window-height="811" id="namedview13" showgrid="false"
-                                fit-margin-top="0" fit-margin-left="0" fit-margin-right="0" fit-margin-bottom="0"
-                                inkscape:zoom="0.39642998" inkscape:cx="68.450005" inkscape:cy="48.350011"
-                                inkscape:window-x="670" inkscape:window-y="233" inkscape:window-maximized="0"
-                                inkscape:current-layer="Calque_1" />
-                            <g id="g3" transform="translate(-229.2,-372.70002)">
-                                <polygon
-                                    points="229.2,443.9 279.9,443.9 279.9,469.3 305.2,469.3 305.2,423.4 254.6,423.4 305.2,372.7 279.9,372.7 229.2,423.4 "
-                                    id="polygon5" style="fill: #34495E;" />
-                                <polygon points="316.1,398.1 341.4,372.7 316.1,372.7 " id="polygon7" style="fill: #34495E;" />
-                                <polygon
-                                    points="341.4,398.1 316.1,423.4 316.1,448.7 341.4,448.7 341.4,423.4 366.8,398.1 366.8,372.7 341.4,372.7 "
-                                    id="polygon9" style="fill: #34495E;" />
-                                <polygon points="366.8,423.4 341.4,448.7 366.8,448.7 " id="polygon11" style="fill: #34495E;" />
-                            </g>
-                        </svg>
-                    </a>
-                    <a href="#" class="icons"><i class='bx bxl-github'></i></a>
-                    <a href="#" class="icons"><i class='bx bxl-linkedin'></i></a>
-                </div>
-                <div class="input-box">
-                    <input type="text" name="loginID" placeholder="LoginID">
-                </div>
-                <div class="input-box">
-                    <input type="password" name="password" placeholder="Password">
-                </div>
-                <a href="#">Forget Password?</a>
-                <button>Sign In</button>
-            </form>
-        </div>
-
-
-        <div class="toggle-container">
-            <div class="toggle">
-                <div class="toggle-panel toggle-left">
-                    <h1>Welcome To <br>GAMENAME</h1>
-                    <p>Sign in With ID & Password</p>
-                    <button class="hidden" id="login">Sign In</button>
-                </div>
-                <div class="toggle-panel toggle-right">
-                    <h1>Welcome To <br>GAMENAME</h1>
-                    <p>Join the ultimate ping pong experience ! Let's play !</p>
-                    <button class="hidden" id="register">Sign Up</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="script.js"></script>
-</body>
-
-</html>
+              <!DOCTYPE html>
+              <html lang="en">
+              
+              <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Document</title>
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+                <link rel="stylesheet" href="style.css">
+              </head>
+              <body class="no-scroll">
+                <div class="background"></div>
+                  <!-- Navbar -->
+                  <nav class="navbar navbar-expand-lg">
+                    <!-- fluid to be added later on -->
+                    <div class="container-fluid">
+                      <!-- Logo -->
+                      <a href="#"><img class="image" src="../img/logo.png"></a>
+                      <!-- SideBar -->
+                      <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                        <!-- SideBar Header -->
+                        <div class="offcanvas-header text-white border-bottom shadow-none">
+                          <a href="#"><img class="image" src="../img/logo.png"></a>
+                          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                        </div>
+                        <!-- SideBar Body -->
+                        <div class="offcanvas-body">
+                          <ul class="navbar-nav"> <!-- justify-content-center fs-6 flex-grow-1 pe-3 gap-2 -->
+                            <li class="nav-item">
+                              <a class="nav-link fonts" href="#home"><strong>Home</strong></a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link fonts" href="#leaderboard"><strong>Leaderboard</strong></a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link fonts" href="#leaderboard"><strong>About Us</strong></a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- Toggle Button -->
+                      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <!-- USER PROFILE -->
+                      <button class="user">
+                        <div class="d-flex flex-column justify-content-center align-items-center gap-2 flex-lg-row bot">
+                          <div class="ProfileImage">
+              
+                          </div>
+                          <div class="UserProfile">
+                            <a href="#" class="text-white text-decoration-one px-3 py-1 rounded-4 btn customBack"><strong>USER HERE</strong></a>
+                          </div>
+                        </div>
+                      </button>
+                    </div>
+                  </nav>
+                  <div class="contain">
+                    <div class="friend-list">
+                      <div class="friend-list-header">
+                        <span>Friends</span>
+                        <div class="actions">
+                          <button class="btn btn-light" id="search-btn">
+                            <i class="fas fa-search"></i>
+                          </button>
+                          <button class="btn btn-light" id="add-btn">
+                            <i class="bi bi-person-plus-fill"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <input type="text" class="form-control search-bar" id="search-bar" placeholder="Search friends...">
+                      <input type="text" class="form-control add-friend-bar" id="add-friend-bar" placeholder="Add friends...">
+                      <div class="friend" data-friend="Friend 1">Friend 1</div>
+                      <div class="friend" data-friend="Friend 2">Friend 2</div>
+                      <div class="friend" data-friend="Friend 3">Friend 3</div>
+                    </div>
+                  
+                    <div class="conversation">
+                      <h2>Conversation with <span id="friend-name"></span></h2>
+                      <div id="conversation-content">
+                        <!-- Conversation content will be dynamically loaded here -->
+                      </div>
+                      <button id="back-button">Back to Friends List</button>
+                    </div>
+                  </div>
+                  <button class="btn btn-light toggle-btn" id="toggle-btn">Friend List</button>
+                  <div class="Text">
+                    <p class="Title fonts">Welcome, Summoners,</p>
+                    <p class="fonts">
+                      to the ultimate Ping Pong experience! Immerse yourself in a world where skill meets precision, and every game is a battle for glory. Whether you're here to challenge the leaderboard, engage with fellow enthusiasts, or simply enjoy a match.
+                    </p>
+                  </div>
+                  <a href=""><img class="play" src="playBtn.png" alt=""></a>
+                  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+                  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+                  crossorigin="anonymous"></script>
+                  <script src="script.js"></script>
+              </body>
+              </html>

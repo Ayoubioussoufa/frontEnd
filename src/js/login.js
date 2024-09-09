@@ -32,34 +32,34 @@ for (let i = 0; i < passwordToggleBtn.length; i++) {
     });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('signUpForm').addEventListener('submit', async function(event) {
-        event.preventDefault(); // Prevent the default signUp submission
-        if (passwordSimilar1.value != passwordSimilar2.value)
-        {
-            alert('Password does not meet the requirements.');
-            return; // Stop further execution
-        }
-        const formData = new FormData(this);
-        console.log(formData.get('loginID'));
-        console.log(formData.get('password'));
-        console.log(formData.get('email'));
-        console.log(formData);
-        try {
-            let response = await fetch('http://10.14.53.154:8000/signup/', { // Specify the server endpoint directly
-                method: 'POST',
-                body: formDataToJson(formData)
-            })
-            let rewind = await response.json();
-            console.log("Response : ", rewind);
-            if (response.ok) {
-                document.location.href = 'http://localhost:5501';
-            }
-        } catch (error) {
-            console.error("Error : ", error);
-        }
-    });
-});
+// document.addEventListener('DOMContentLoaded', function() { had DOMCONTENTLOADED triggers when the page is loadded (SPA doesnt)
+//     document.getElementById('signUpForm').addEventListener('submit', async function(event) {
+//         event.preventDefault(); // Prevent the default signUp submission
+//         if (passwordSimilar1.value != passwordSimilar2.value)
+//         {
+//             alert('Password does not meet the requirements.');
+//             return; // Stop further execution
+//         }
+//         const formData = new FormData(this);
+//         console.log(formData.get('loginID'));
+//         console.log(formData.get('password'));
+//         console.log(formData.get('email'));
+//         console.log(formData);
+//         try {
+//             let response = await fetch('http://10.14.53.154:8000/signup/', { // Specify the server endpoint directly
+//                 method: 'POST',
+//                 body: formDataToJson(formData)
+//             })
+//             let rewind = await response.json();
+//             console.log("Response : ", rewind);
+//             if (response.ok) {
+//                 document.location.href = 'http://localhost:5501';
+//             }
+//         } catch (error) {
+//             console.error("Error : ", error);
+//         }
+//     });
+// });
 
 // This script runs when the page loads
 window.onload = async function() {

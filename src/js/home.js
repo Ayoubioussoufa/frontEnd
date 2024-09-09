@@ -1,8 +1,8 @@
+// document.addEventListener("DOMContentLoaded", function () {
 const toggleBtn = document.getElementById("toggle-btn");
 const friendList = document.querySelector(".friend-list");
 const conversation = document.querySelector(".conversation");
 
-document.addEventListener("DOMContentLoaded", function () {
     toggleBtn.addEventListener("click", function () {
       if (friendList.style.display === "none") {
         friendList.style.display = "block";
@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
       friendList.style.display = "block";
       conversation.style.display = "none";
     });
-});
 
 document.getElementById('search-btn').addEventListener('click', function() {
     if (document.getElementById('search-bar').style.display == 'block')
@@ -55,7 +54,7 @@ document.getElementById('add-btn').addEventListener('click', function() {
         document.getElementById('add-friend-bar').style.display = 'block';
     }
 });
-
+// });
 // function createBubble() {
 //     const bubble = document.createElement('div');
 //     bubble.classList.add('bubble');

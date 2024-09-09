@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
             contentDiv.innerHTML = html;
             // Add event listener for the login form submission
             document.getElementById('loginForm').addEventListener('submit', function (event) {
-              // event.preventDefault();
+              event.preventDefault(); // prevent refreshing the page
               navigateTo('home'); // Use navigateTo function
             });
           })

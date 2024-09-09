@@ -1,108 +1,60 @@
-// Get the password input and toggle button
-const passwordInput = document.getElementsByClassName('passwordInput');
-const passwordToggleBtn = document.getElementsByClassName('passwordToggleBtn');
-const passwordSimilar1 = document.getElementById("passW1");
-const passwordSimilar2 = document.getElementById("passW2");
+const toggleBtn = document.getElementById("toggle-btn");
+const friendList = document.querySelector(".friend-list");
+const conversation = document.querySelector(".conversation");
 
-// shifting
-const container = document.getElementById('container');
-const registerBtn = document.getElementById('register');
-const loginBtn = document.getElementById('login');
-
-registerBtn.addEventListener('click', () => {
-    container.classList.add("active");
+document.addEventListener("DOMContentLoaded", function () {
+    toggleBtn.addEventListener("click", function () {
+      if (friendList.style.display === "none") {
+        friendList.style.display = "block";
+      } else {
+        friendList.style.display = "none";
+        conversation.style.display = "none"; 
+      }
+    });
+  
+    document.querySelectorAll(".friend").forEach(friend => {
+      friend.addEventListener("click", function () {
+        // document.getElementById("friend-name").textContent = this.getAttribute("data-friend");
+        let friendName = "salam";
+        if (document.querySelector('.conversation').style.display == 'none') {
+          document.querySelector('.conversation').style.display = 'block';
+          document.getElementById('conversation-content').innerHTML = `<p>Chatting with ${friendName}...</p>`;
+      }
+      else
+          document.querySelector('.conversation').style.display = 'none';
+      });
+    });
+  
+    document.getElementById("back-button").addEventListener("click", function () {
+      friendList.style.display = "block";
+      conversation.style.display = "none";
+    });
 });
 
-loginBtn.addEventListener('click', () => {
-    container.classList.remove("active");
-});
-
-// Add event listener to toggle button
-for (let i = 0; i < passwordToggleBtn.length; i++) {
-    passwordToggleBtn[i].addEventListener('click', function() {
-    console.log('Toggle button clicked');
-    // Toggle password visibility
-    if (passwordInput[i].type === 'password') {
-        passwordInput[i].type = 'text';
-        passwordToggleBtn[i].innerHTML = '<i class="bi bi-eye" style="color: black;"></i>';
-    } else {
-        passwordInput[i].type = 'password';
-        passwordToggleBtn[i].innerHTML = '<i class="bi bi-eye-slash" style="color: black;"></i>';
+document.getElementById('search-btn').addEventListener('click', function() {
+    if (document.getElementById('search-bar').style.display == 'block')
+    {
+        document.getElementById('search-bar').style.display = 'none';
+        document.getElementById('add-friend-bar').style.display = 'none';
     }
-    });
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('signUpForm').addEventListener('submit', async function(event) {
-        event.preventDefault(); // Prevent the default signUp submission
-        if (passwordSimilar1.value != passwordSimilar2.value)
-        {
-            alert('Password does not meet the requirements.');
-            return; // Stop further execution
-        }
-        const formData = new FormData(this);
-        console.log(formData.get('loginID'));
-        console.log(formData.get('password'));
-        console.log(formData.get('email'));
-        console.log(formData);
-        try {
-            let response = await fetch('http://10.14.53.154:8000/signup/', { // Specify the server endpoint directly
-                method: 'POST',
-                body: formDataToJson(formData)
-            })
-            let rewind = await response.json();
-            console.log("Response : ", rewind);
-            if (response.ok) {
-                document.location.href = 'http://localhost:5501';
-            }
-        } catch (error) {
-            console.error("Error : ", error);
-        }
-    });
+    else {
+        document.getElementById('search-bar').style.display = 'block';
+        document.getElementById('add-friend-bar').style.display = 'none';
+    }
 });
 
-// This script runs when the page loads
-window.onload = async function() {
-    // Get the query parameters from the URL
-    const urlParams = new URLSearchParams(window.location.search);
-    
-    // Example: Extract a query parameter called 'code'
-    const authCode = urlParams.get('code');
-    
-    if (authCode) {
-        // Do something with the authorization code
-        console.log('Authorization Code:', authCode);
-        try {
-            const response = await fetch('http://10.14.53.154:8000/login/42?code=' + authCode);
-            if (response.ok) {
-                console.log('Authentication initiated successfully');
-                console.log(response);
-                let r = await response.json();
-                console.log(r);
-                document.location.href = 'http://localhost:5501';
-
-            } else {
-                console.error('Failed to initiate 42 authentication');
-            }
-        } catch (error) {
-            console.error('Login with 42 failed:', error);
-        }
-        // Display the authorization code on the webpage
-        // document.getElementById('message').innerText = 'Authorization Code: ' + authCode;
-    } else {
-        // Handle the absence of the authorization code
-        console.log('No authorization code found.');
-        // document.getElementById('message').innerText = 'No authorization code found.';
+document.getElementById('add-btn').addEventListener('click', function() {
+    if (document.getElementById('add-friend-bar').style.display == 'block')
+    {
+        document.getElementById('search-bar').style.display = 'none';
+        document.getElementById('add-friend-bar').style.display = 'none';
     }
-};
-
-function formDataToJson(formData) {
-    const obj = {};
-    formData.forEach((value, key) => {
-        obj[key] = value;
-    });
-    return JSON.stringify(obj);
-}
+    else
+    {
+        document.getElementById('search-bar').style.display = 'none';
+        document.getElementById('add-friend-bar').style.display = 'block';
+    }
+});
 
 function createBubble() {
     const bubble = document.createElement('div');
@@ -117,3 +69,10 @@ function createBubble() {
 }
 
 setInterval(createBubble, 300);
+
+function handleResize() {
+  if (window.innerWidth > 990)
+    friendList.style.display = "block";
+}
+
+window.addEventListener("resize", handleResize); // TO BE REMOVED F PLAY AND FRIEND DISPLAY NONE fiha 
