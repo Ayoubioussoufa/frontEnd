@@ -35,107 +35,72 @@
                       </g>
                   </svg>
               </a> -->
-              <!DOCTYPE html>
-              <html lang="en">
-              
-              <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Document</title>
-                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-                <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-                <link rel="stylesheet" href="style.css">
-              </head>
-              <body class="no-scroll">
-                <div class="background"></div>
-                  <!-- Navbar -->
-                  <nav class="navbar navbar-expand-lg">
-                    <!-- fluid to be added later on -->
-                    <div class="container-fluid">
-                      <!-- Logo -->
-                      <a href="#"><img class="image" src="../img/logo.png"></a>
-                      <!-- SideBar -->
-                      <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
-                        aria-labelledby="offcanvasNavbarLabel">
-                        <!-- SideBar Header -->
-                        <div class="offcanvas-header text-white border-bottom shadow-none">
-                          <a href="#"><img class="image" src="../img/logo.png"></a>
-                          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
-                        </div>
-                        <!-- SideBar Body -->
-                        <div class="offcanvas-body">
-                          <ul class="navbar-nav"> <!-- justify-content-center fs-6 flex-grow-1 pe-3 gap-2 -->
-                            <li class="nav-item">
-                              <a class="nav-link fonts" href="#home"><strong>Home</strong></a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link fonts" href="#leaderboard"><strong>Leaderboard</strong></a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link fonts" href="#leaderboard"><strong>About Us</strong></a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <!-- Toggle Button -->
-                      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                      <!-- USER PROFILE -->
-                      <button class="user">
-                        <div class="d-flex flex-column justify-content-center align-items-center gap-2 flex-lg-row bot">
-                          <div class="ProfileImage">
-              
-                          </div>
-                          <div class="UserProfile">
-                            <a href="#" class="text-white text-decoration-one px-3 py-1 rounded-4 btn customBack"><strong>USER HERE</strong></a>
-                          </div>
-                        </div>
-                      </button>
-                    </div>
-                  </nav>
-                  <div class="contain">
-                    <div class="friend-list">
-                      <div class="friend-list-header">
-                        <span>Friends</span>
-                        <div class="actions">
-                          <button class="btn btn-light" id="search-btn">
-                            <i class="fas fa-search"></i>
-                          </button>
-                          <button class="btn btn-light" id="add-btn">
-                            <i class="bi bi-person-plus-fill"></i>
-                          </button>
-                        </div>
-                      </div>
-                      <input type="text" class="form-control search-bar" id="search-bar" placeholder="Search friends...">
-                      <input type="text" class="form-control add-friend-bar" id="add-friend-bar" placeholder="Add friends...">
-                      <div class="friend" data-friend="Friend 1">Friend 1</div>
-                      <div class="friend" data-friend="Friend 2">Friend 2</div>
-                      <div class="friend" data-friend="Friend 3">Friend 3</div>
-                    </div>
-                  
-                    <div class="conversation">
-                      <h2>Conversation with <span id="friend-name"></span></h2>
-                      <div id="conversation-content">
-                        <!-- Conversation content will be dynamically loaded here -->
-                      </div>
-                      <button id="back-button">Back to Friends List</button>
-                    </div>
-                  </div>
-                  <button class="btn btn-light toggle-btn" id="toggle-btn">Friend List</button>
-                  <div class="Text">
-                    <p class="Title fonts">Welcome, Summoners,</p>
-                    <p class="fonts">
-                      to the ultimate Ping Pong experience! Immerse yourself in a world where skill meets precision, and every game is a battle for glory. Whether you're here to challenge the leaderboard, engage with fellow enthusiasts, or simply enjoy a match.
-                    </p>
-                  </div>
-                  <a href=""><img class="play" src="playBtn.png" alt=""></a>
-                  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-                  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-                  crossorigin="anonymous"></script>
-                  <script src="script.js"></script>
-              </body>
-              </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative; /* Important for positioning the circles relative to the image */
+        height: 100vh; /* Full viewport height */
+        width: 100%;  /* Full width of the screen */
+    }
+    
+    .main-image {
+        position: relative;
+        z-index: 1; /* Ensure the image stays on top */
+        max-width: 200px; /* Control the image size */
+        height: auto;
+    }
+    
+    /* Circle Styles */
+    .circle {
+        position: absolute;
+        border-radius: 50%;
+        border: 5px solid #FF5733; /* Example color for the circles */
+        z-index: 0; /* Ensure circles are behind the image */
+    }
+    
+    /* Specific Circles */
+    .circle1 {
+        width: 300px;
+        height: 300px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.2); /* Slightly larger than the image */
+    }
+    
+    .circle2 {
+        width: 400px;
+        height: 400px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.5); /* Larger than circle1 */
+    }
+    
+    .circle3 {
+        width: 500px;
+        height: 500px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.8); /* Largest circle */
+    }
+    
+
+</style>
+<body>
+    <div class="image-container">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+        <img src="src/assets/landingPage/subtract.png" alt="Centered Image" class="main-image">
+    </div>
+    
+</body>
+</html>
