@@ -35,89 +35,208 @@
                       </g>
                   </svg>
               </a> -->
-              <!DOCTYPE html>
-              <html lang="en">
-              <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Consistent Image Positioning</title>
-                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-                <style>
-                  /* Container for images */
-/* Container for images */
-.image-container {
-    position: relative; /* Positioning context for absolute elements */
-    width: 100%;
-    height: auto;
-  }
-  
-  /* Main Image */
-  .main-image {
-    position: relative;
-    z-index: 1; /* Keep this on top */
-    max-width: 80%; /* Adjust based on design needs */
-    height: auto;
-  }
-  
-  /* Overlay Images */
-  .overlay-image {
-    position: absolute; /* Positioned relative to .image-container */
-    z-index: 0; /* Behind the main image */
-    width: 100px; /* Fixed size for small images */
-    height: auto; /* Maintain aspect ratio */
-  }
-  
-  /* Top Overlay Image */
-  .top {
-    top: 5%; /* Positioning from the top of the container */
-    left: 10%; /* Positioning from the left of the container */
-  }
-  
-  /* Middle Overlay Image */
-  .middle {
-    top: 50%; /* Positioning from the top of the container */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Centered horizontally */
-  }
-  
-  /* Bottom Overlay Image */
-  .bottom {
-    bottom: 5%; /* Positioning from the bottom of the container */
-    right: 10%; /* Positioning from the right of the container */
-  }
-  
-  /* Hide images on small screens */
-  @media (max-width: 767.98px) {
-    .overlay-image {
-      display: none; /* Hide images on small screens */
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>        <!--https://boxicons.com/ -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>Document</title>
+  <style>
+    .contain {
+      display: flex;
+      flex-wrap: wrap;
+      height: 100vh; /* Full viewport height */
     }
-  }
+    
+    .friend-list,
+    .conversation,
+    .text {
+      flex: 1; /* Flex-grow to occupy equal space */
+      max-width: 33.33%; /* 4/12 of the screen */
+      box-sizing: border-box; /* Include padding and border in width calculation */
+      height: 100%;
+      overflow: hidden;
+      padding: 20px;
+    }
+    
+    .friend-list {
+      background: green;
+      background: rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px);
+      color: rgb(255, 255, 255);
+      border-radius: 10px;
+    }
+    
+    .conversation {
+      background: rgb(185, 143, 143);
+      backdrop-filter: blur(5px);
+      color: rgb(255, 255, 255);
+      border-radius: 10px;
+      position: relative;
+    }
+    
+    .text {
+      background: rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px);
+      color: rgb(255, 255, 255);
+      border-radius: 10px;
+    }
+    
+    .friend-list-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      font-size: 20px;
+      color: white;
+    }
+    
+    .friend-list-header .actions {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .friend-list-header .btn {
+      background-color: rgba(255, 6, 6, 0.1);
+      border: none;
+      color: white;
+      font-size: 14px;
+      padding: 5px 10px;
+    }
+    
+    .friend-list-header .btn:hover {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    
+    .search-bar,
+    .add-friend-bar {
+      margin-bottom: 20px;
+    }
+    
+    .friend {
+      padding: 15px;
+      margin-bottom: 20px;
+      background-color: rgba(0, 0, 0, 0.01);
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      color: white;
+    }
+    
+    .friend:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+    
+    .toggle-btn {
+      display: none; /* Hide the toggle button by default */
+    }
+    
+    .text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    #playButton {
+      position: relative;
+    }
+    
+    .play-button {
+      position: relative;
+    }
+    
+    #playButton img {
+      width: 100%;
+    }
+    
+    #playButton span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    @media (max-width: 768px) {
+      .friend-list,
+      .conversation,
+      .text {
+        max-width: 100%;
+      }
+    }
+    
+
+  </style>
+</head>
+<body>
+  <div class="contain">
+    <div class="friend-list">
+      <div class="friend-list-header">
+        <span>Friends</span>
+        <div class="actions">
+          <button class="btn btn-light" id="search-btn">
+            <i class="fas fa-search"></i>
+          </button>
+          <button class="btn btn-light" id="add-btn">
+            <i class="bi bi-person-plus-fill"></i>
+          </button>
+        </div>
+      </div>
+      <input type="text" class="form-control search-bar" id="search-bar" placeholder="Search friends...">
+      <input type="text" class="form-control add-friend-bar" id="add-friend-bar" placeholder="Add friends...">
+      <div class="friend" data-friend="Friend 1">Friend 1</div>
+      <div class="friend" data-friend="Friend 2">Friend 2</div>
+      <div class="friend" data-friend="Friend 3">Friend 3</div>
+    </div>
   
-                </style>
-              </head>
-              <body>
-                <div class="container-fluid vh-100">
-                  <div class="row h-100">
-                    <!-- Left Section -->
-                    <div class="col-12 col-md-5 d-flex flex-column justify-content-center align-items-center text-center p-3">
-                      <h1 class="mb-5">Main Title</h1>
-                      <p class="mb-5">Some descriptive text goes here.</p>
-                      <button class="btn btn-primary">Call to Action</button>
-                    </div>
-              
-                    <!-- Right Section -->
-                    <div class="col-12 col-md-7 d-flex justify-content-center align-items-center image-container">
-                      <img src="https://via.placeholder.com/300" class="img-fluid main-image" alt="Main Image">
-                      <img src="https://via.placeholder.com/100" class="overlay-image top" alt="Top Image">
-                      <img src="https://via.placeholder.com/100" class="overlay-image middle" alt="Middle Image">
-                      <img src="https://via.placeholder.com/100" class="overlay-image bottom" alt="Bottom Image">
-                    </div>
-                  </div>
-                </div>
-              
-                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-              </body>
-              </html>
-              
+    <div class="conversation">
+      <h2>Conversation with <span id="friend-name"></span></h2>
+      <div id="conversation-content">
+        <!-- Conversation content will be dynamically loaded here -->
+      </div>
+      <button id="back-button">Back to Friends List</button>
+    </div>
+  
+    <div class="text">
+      <p class="title fonts">Welcome, Summoners,</p>
+      <p class="fonts">
+        to the ultimate Ping Pong experience! Immerse yourself in a world where skill meets precision, and every game is a battle for glory. Whether you're here to challenge the leaderboard, engage with fellow enthusiasts, or simply enjoy a match.
+      </p>
+      <button id="playButton" class="btn play-button position-relative p-0 border-0">
+        <img src="src/assets/home/button.png" alt="Play Btn" class="play">
+        <span class="position-absolute top-50 start-50 translate-middle test">Play</span>
+      </button>
+    </div>
+  </div>
+  <button class="btn btn-light toggle-btn" id="toggle-btn">Friend List</button>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script>
+    document.querySelectorAll('.friend').forEach(friend => {
+      friend.addEventListener('click', function() {
+        // Show the conversation
+        document.querySelector('.conversation').style.display = 'block';
+        // Hide the friend list and text
+        document.querySelector('.friend-list').style.display = 'none';
+        document.querySelector('.text').style.display = 'none';
+        // Update conversation header with friend's name
+        document.getElementById('friend-name').textContent = this.dataset.friend;
+      });
+    });
+    
+    document.getElementById('back-button').addEventListener('click', function() {
+      // Hide the conversation
+      document.querySelector('.conversation').style.display = 'none';
+      // Show the friend list and text
+      document.querySelector('.friend-list').style.display = 'block';
+      document.querySelector('.text').style.display = 'block';
+    });
+    
+  </script>
+</body>
+</html>

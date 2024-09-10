@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Function to handle navigation
   function navigateTo(page) {
     // location.hash = page;
+    // Clean up the current page before loading the new one
     history.pushState({ page }, '', `#${page}`);
     loadPage(page);
   }
@@ -81,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
           return response.text();
         })
         .then(html => {
-          console.log(html);
+          // console.log(html);
           contentDiv.innerHTML = `${html}`;
         })
         .catch(error => {
@@ -91,6 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Remove existing script if necessary
     const existingScript = document.getElementById('dynamic-script');
+    // console.log(existingScript);
     if (existingScript) {
       existingScript.remove(); // Remove the old script
     }
@@ -100,12 +102,11 @@ document.addEventListener('DOMContentLoaded', function () {
     script.src = `src/js/${page}.js`; // Dynamic JS based on page
     script.id = 'dynamic-script'; // Assign an ID to the script tag for future removal
     document.body.appendChild(script);
-  
-    window.addEventListener('popstate', (event) => {
-      const page = window.location.hash.slice(1) || 'landing';
-      loadPage(page);
-  });
 }
+  window.addEventListener('popstate', (event) => {
+    const page = window.location.hash.slice(1) || 'landing';
+    loadPage(page);
+  });
 });
 
 
