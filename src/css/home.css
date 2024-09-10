@@ -10,38 +10,23 @@ body, html {
     font-family:'Luminari';
 }
 
-/* @font-face {
-    font-family: 'Luminari';
-    src: url('../luminari-cdnfonts/Luminari-Regular.ttf');
-} */
+/*------------------------------*/
 
-/* .background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../img/prestige-ocean-song-seraphine-league-of-legneds-4k-8y-1920x1080.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 0;
-} */
-
-.image {
+/* LOGO */
+.image { 
     display: block;
     width: 40px;
     height: auto;
 }
 
-.play-button {
+/* .play-button {
   position: relative;
   display: inline-block;
   border: none;
   padding: 0;
   background-color: transparent;
   cursor: pointer;
-}
+} */
 
 .play-button img {
   display: block;
@@ -49,34 +34,51 @@ body, html {
   height: auto;
 }
 
+/* PLAY BUTTON */
 .play-button .test {
-  color: white; /* Text color */
-  font-size: 1.5rem; /* Adjust size as needed */
+  color: white;
+  font-size: 1.4rem;
   font-weight: bold;
   text-align: center;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none; /* Prevents clicking on the text itself */
+  /* top: 60%;
+  left: 60%; */
+  /* transform: translate(-50%, -50%); */
+  /* pointer-events: none; */
 }
 
 /*------------------------------*/
-
-.show-conversation .conversation {
-    display: block;
+/*FRIEND LIST, Paragraph and avatar*/
+/*------------------------------*/
+.friend-list, .Text, .avatar {
+  padding: 20px;
+  height: 100%;
 }
+
+.avatar img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/*------------------------------*/
+/*FRIEND LIST AND CONVO*/
+/*------------------------------*/
+
+/* .show-conversation .conversation {
+    display: block;
+} */
 
 .contain {
     display: flex;
     align-items: flex-start;
     position: relative; /* Make contain relative for positioning conversation */
-  }
+}
   
-  .friend-list, .conversation {
-    width: 435px;
-    height: 600px;
-    margin: 150px 0px 0px 33px;
+.friend-list, .conversation {
+    width: 29vw;
+    height: 70vh;
+    margin: 50px 0px 0px 33px;
     overflow-y: auto;
     background: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
@@ -84,7 +86,7 @@ body, html {
     border-radius: 10px;
     padding: 30px 40px;
     z-index: 1;
-  }
+}
   
   .friend-list {
     margin-right: -10px; /* Space between friend list and conversation */
@@ -107,8 +109,8 @@ body, html {
   .conversation {
     display: none;
     position: absolute;
-    top: 0;
-    left: 0;
+    /* top: 0%;
+    left: 0%; */
     z-index: 2;
   }
   
@@ -169,20 +171,24 @@ body, html {
   
 /* ------------------------------------------------------------------------------*/
 
+
 .Text {
-    display: block;
-    position: absolute;
-    top: 35%;
-    left: 26%;
+    /* display: block; */
+    /* position: absolute; */
+    margin: 10vw 10px 10px 10px;
+    top: 50%;
+    left: 50%;
     width: auto; /* Allow width to adjust automatically */
-    max-width: 600px; /* Set a maximum width */
+    max-width: 33vw; /* Set a maximum width */
     color: white;
     z-index: 0;
     font-size: 14vw; /* Adjust font size relative to viewport width */
 }
 
 .Title {
-    font-size: 34px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--colors-cyan);
 }
 
 .fonts {
@@ -196,6 +202,7 @@ body, html {
          1px  1px 0 #5c8795; */
 }
 
+/* NAVBAR */
 .navbar {
     height: 120px !important;
     border-bottom: 1px solid #f2bddf !important; /* Bottom border color */
@@ -203,8 +210,8 @@ body, html {
 }
 
 .navbar .image {
-    height: 40px !important;
-    margin-right: 20px !important;
+    height: 3rem !important;
+    margin-right: 1rem !important;
 }
 
 .user {
@@ -259,7 +266,7 @@ body, html {
 
 .navbar .user .customBack {
     /* background-color: #007bff !important; */
-    color: #a68a00 !important; /*user !!!!*/
+    color: #a6009e !important; /*user !!!!*/
     font-weight: bold !important;
     border: none !important;
 }
@@ -281,24 +288,25 @@ body, html {
     }
 
     .toggle-btn {
+      width: 10rem;
       display: block;
       position: fixed;
-      bottom: 20px;
-      left: 20px;
+      bottom: 2rem;
+      left: 2rem;
       z-index: 3;
     }
 
     .Text {
         display: none;
     }
-
+/* 
     .play {
         position: fixed;
-        left: 50%;
-        top: 50%;
+        left: 20%;
+        top: 20%;
         transform: translate(-50%, -50%);
         z-index: 0;
-      }
+      } later on !!!!! */ 
   }
   
   @media (min-width: 990px) {
@@ -326,11 +334,11 @@ body, html {
 }
 
 
-@media (max-width: 1585px) {
+/* @media (max-width: 1585px) {
     .Text {
       display: none;
     }
-  }
+} */
 
   .box {
     position: absolute;
