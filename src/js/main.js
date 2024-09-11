@@ -161,6 +161,11 @@ function initializePageScripts(page) {
         module.initLoginPage();
       });
       break;
+    case 'play':
+      import('./play.js').then(module => {
+        module.initPlayPage();
+      });
+      break;
     default:
       console.log('No script found for this page');
   }

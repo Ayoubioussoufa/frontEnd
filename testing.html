@@ -36,132 +36,93 @@
                   </svg>
               </a> -->
 
-              <!DOCTYPE html>
-              <html lang="en">
-              <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Responsive Layout</title>
-                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-                <style>
-                  body {
-                    overflow: hidden;
-                  }
+<!DOCTYPE html>
+<html lang="en">
 
-                  .full-height {
-                    height: 100vh; /* Full viewport height */
-                  }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Cards with Navbar and Confirm Button</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
 
-                  .table-container, .paragraph-container, .image-container {
-                    background: rgba(0, 0, 0, 0.1);
-                    backdrop-filter: blur(5px);
-                    border-radius: 10px;
-                    padding: 20px;
-                    height: 100%; /* Ensure full height for responsiveness */
-                  }
-                  .image-container img {
-                    width: 100%;
-                    height: auto;
-                    border-radius: 10px;
-                  }
+<body>
 
-                  img {
-                    max-width: 100%;
-                    height: auto;
-                    object-fit: cover; /* Ensure the image covers the container without stretching */
-                  }
-                  
-                  table {
-                    width: 100%;
-                    height: 100%;
-                  }
-                  
-                  .text-center {
-                    text-align: center;
-                  }
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-                  .img-responsive {
-                    width: 90%; /* Make the image fit the width of its container */
-                    height: auto; /* Maintain the aspect ratio of the image */
-                    max-width: 100%; /* Ensure the image doesn’t exceed its container */
-                    object-fit: cover; /* Cover the container area while preserving aspect ratio */
-                  }
-                  
-                  
-                </style>
-              </head>
-              <body>
-                <!-- Navbar -->
-                <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                  <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Navbar</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                          </a>
-                          <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                          </ul>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                        </li>
-                      </ul>
-                      <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                      </form>
-                    </div>
-                  </div>
-                </nav>
-              
-                <!-- Main Content -->
-                <div class="container-fluid mt-4">
-                  <div class="row">
-                    <div class="col-md-4 table-container">
-                      <table class="table table-bordered">
-                        <thead>
-                          <tr>
-                            <th>Header 1</th>
-                            <th>Header 2</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>Data 1</td>
-                            <td>Data 2</td>
-                          </tr>
-                          <tr>
-                            <td>Data 3</td>
-                            <td>Data 4</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <div class="col-md-4 d-flex justify-content-center align-items-center paragraph-container">
-                      <p class="text-center">This is a paragraph that takes 4/12 of the screen width. It is centered in its column.</p>
-                    </div>
-                    <div class="col-md-4 image-container">
-                      <img src="src/assets/home/avatar.png" alt="Description" class="img-fluid img-responsive ">
-                    </div>
-                  </div>
-                </div>
-              
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-              </body>
-              </html>
-              
+  <!-- Main Content: Cards in the middle -->
+  <div class="container-fluid d-flex flex-column align-items-center justify-content-center"
+    id="main-container">
+    <div class="row w-100">
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100 text-center">
+          <img src="src/assets/play/1v1.png" class="card-img-top" alt="Card Image 1">
+          <div class="card-body">
+            <h5 class="card-title">Card Title 1</h5>
+            <p class="card-text">Some quick example text.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100 text-center">
+          <img src="src/assets/play/vsBot.png" class="card-img-top" alt="Card Image 2">
+          <div class="card-body">
+            <h5 class="card-title">Card Title 2</h5>
+            <p class="card-text">Some quick example text.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100 text-center">
+          <img src="src/assets/play/tournament.png" class="card-img-top" alt="Card Image 3">
+          <div class="card-body">
+            <h5 class="card-title">Card Title 3</h5>
+            <p class="card-text">Some quick example text.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100 text-center">
+          <img src="src/assets/play/friend.png" class="card-img-top" alt="Card Image 4">
+          <div class="card-body">
+            <h5 class="card-title">Card Title 4</h5>
+            <p class="card-text">Some quick example text.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confirm Button at the Bottom -->
+  <button id="confirm-button" class="btn position-relative">
+    <img src="src/assets/home/button.png" alt="Confirm" class="img-fluid">
+    <span>Confirm</span>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

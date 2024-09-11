@@ -67,7 +67,7 @@ export function initHomePage() {
   const playButton = document.getElementById('playButton');
   if (playButton) {
     playButton.addEventListener('click', function () {
-      navigateTo('leaderboard'); // Redirect to 'login' page when Play button is clicked
+      navigateTo('play'); // Redirect to 'login' page when Play button is clicked
     });
   }
 

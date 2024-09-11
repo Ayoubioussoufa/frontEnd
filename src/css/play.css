@@ -1,0 +1,237 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: visible; /*problem for smaller screens !!!!!!*/
+  background-color: var(--colors-body);
+  font-family: 'Luminari';
+  overflow-x: hidden;
+  /* position: relative; */
+}
+
+.image {
+  display: block;
+  width: 40px;
+  height: auto;
+}
+
+.fonts {
+  font-size: 1.1rem;
+  /* font-weight: bold; */
+  color: #ffffff;
+}
+
+.navbar {
+  height: 120px !important;
+  border-bottom: 1px solid #f2bddf !important;
+  /* Bottom border color */
+  /* background-color: transparent; */
+}
+
+.navbar .image {
+  height: 3rem !important;
+  margin-right: 1rem !important;
+}
+
+.user {
+  margin-left: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+.container-fluid {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  height: 100% !important;
+}
+
+.navbar-nav {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 3rem;
+}
+
+.nav-item a {
+  font-size: 1rem;
+  /* Adjust font size */
+  text-align: center;
+  /* katcentri f togglebar*/
+}
+
+.navbar .navbar-toggler {
+  order: 0 !important;
+  margin-right: 20px !important;
+}
+
+.navbar .sidebar .offcanvas-header .image {
+  height: 40px !important;
+}
+
+.navbar .sidebar .offcanvas-body .nav-link {
+  /* color: #ff0000 !important; */
+  padding: 10px !important;
+  margin: 10px;
+}
+
+.navbar .sidebar .offcanvas-body .nav-link:hover {
+  color: var(--colors-cyan) !important;
+  border-radius: 5px !important;
+}
+
+.navbar .user {
+  background: none !important;
+  border: none !important;
+}
+
+.navbar .user .customBack {
+  /* background-color: #007bff !important; */
+  color: #a6009e !important;
+  /*user !!!!*/
+  font-weight: bold !important;
+  border: none !important;
+}
+
+/*------------------------------------*/
+
+.card-img-top {
+  width: 100%;
+  height: 280px; /* Set a fixed height for consistency */
+  object-fit: cover; /* Scale images to cover the area */
+}
+
+.card {
+  border: none;
+  height: 100%;
+  background-color: transparent;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+#main-container {
+  padding-top: 50px;
+  min-height: calc(100vh - 180px); /*120 + 10 + 50*/
+}
+
+#confirm-button {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  z-index: 999;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Scale and shadow effect on click */
+#confirm-button:active {
+  transform: translateX(-50%) scale(0.95); /* Adjust scaling without affecting position */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow on click */
+}
+
+#confirm-button span {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Hide paragraphs initially */
+.card-text {
+  display: none; /* Hide paragraphs by default */
+  transition: opacity 0.3s ease;
+}
+
+.card.active .card-text {
+  display: block; /* Show text when the card is active */
+}
+
+.card.active {
+  background-color: var(--colors-input); /* Change background color for the active card */
+}
+
+/*------------------------------------*/
+
+/* .box {
+  position: absolute;
+  width: 35vw;
+  height: 35vh;
+}
+
+.box .group {
+  position: absolute;
+  width: 35vw;
+  height: 35vh;
+  top: -100%;
+  left: -50%;
+}
+
+.box .ellipse-wrapper {
+  position: absolute;
+  height: 35vh;
+  background-color: var(--colors-pinky);
+  border-width: 15vw 14vh;
+  box-shadow: 0 0 3vw var(--colors-pinky),
+    0 0 6vw var(--colors-pinky),
+    0 0 10vw var(--colors-pinky),
+    0 0 20vw var(--colors-pinky),
+    0 0 35vw var(--colors-pinky),
+    0 0 60vw var(--colors-pinky);
+}
+
+.box .ellipse {
+  position: absolute;
+  width: 35vw;
+  height: 35vh;
+  background-color: var(--colors-pinky);
+  border-width: 15vw 14vh;
+  box-shadow: 0 0 3vw var(--colors-pinky),
+    0 0 6vw var(--colors-pinky),
+    0 0 10vw var(--colors-pinky),
+    0 0 20vw var(--colors-pinky),
+    0 0 35vw var(--colors-pinky),
+    0 0 60vw var(--colors-pinky);
+} */
+
+/* Blue Group */
+/* .box .groupb {
+    position: absolute;
+    width: 35vw;
+    height: 35vh;
+    top: 180%;
+    left: 290%;
+  }
+  
+  .box .ellipse-wrapperb {
+    position: absolute;
+    height: 35vh;
+    background-color: var(--colors-cyan);
+    border-width: 15vw 14vh;
+    box-shadow: 0 0 3vw var(--colors-cyan), 
+                0 0 6vw var(--colors-cyan), 
+                0 0 10vw var(--colors-cyan),
+                0 0 20vw var(--colors-cyan), 
+                0 0 35vw var(--colors-cyan), 
+                0 0 60vw var(--colors-cyan);
+  }
+  
+  .box .ellipseb {
+    position: absolute;
+    width: 35vw;
+    height: 35vh;
+    background-color: var(--colors-cyan);
+    border-width: 15vw 14vh;
+    box-shadow: 0 0 3vw var(--colors-cyan), 
+                0 0 6vw var(--colors-cyan), 
+                0 0 10vw var(--colors-cyan),
+                0 0 20vw var(--colors-cyan), 
+                0 0 35vw var(--colors-cyan), 
+                0 0 60vw var(--colors-cyan);
+  } */
+
+/*------------------------------*/
