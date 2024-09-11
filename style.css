@@ -1,37 +1,27 @@
 html, body {
   height: 100%;
   margin: 0;
-  overflow-x: hidden;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  position: relative;
   background-color: black;
 }
 
-.card {
-  height: 100%; /* Make the card stretch to the row height */
-  background-color: transparent;
-  color: white;
-}
-
-#main-container {
-  /* position: absolute; */
-  padding-top: 80px; /* Account for the navbar */
-  min-height: calc(100vh - 60px); /* Ensures the container takes up the height minus the button space */
-}
-
-#confirm-button {
-  position: fixed; /* Stay fixed at the bottom of the viewport */
-  bottom: 10px; /* 10px from the bottom */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Adjust for perfect centering */
-  width: 200px; /* Set a width for the button */
-  z-index: 999; /* Ensure the button is above other elements */
-}
-
-#confirm-button span {
+body::before {
+  content: '';
   position: absolute;
-  top: 50%; /* Center text vertically within the image */
-  left: 50%; /* Center text horizontally */
-  transform: translate(-50%, -50%); /* Perfect centering */
-  font-size: 1rem; /* Adjust text size */
-  font-weight: bold;
-  color: #fff; /* Text color */
+  top: 0;
+  left: 0;
+  width: 1vw; /* Control the thickness of the glowing border */
+  height: 100vh; /* Full height of the screen */
+  pointer-events: none;
+  z-index: 9999;
+  box-shadow: 
+    0 0 20px rgba(255, 20, 147, 0.7),
+    0 0 40px rgba(255, 20, 147, 0.5),
+    0 0 80px rgba(255, 20, 147, 0.3),
+    0 0 160px rgba(255, 20, 147, 0.1);
 }

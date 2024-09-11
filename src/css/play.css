@@ -3,17 +3,20 @@ html {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: visible; /*problem for smaller screens !!!!!!*/
-  background-color: var(--colors-body);
-  font-family: 'Luminari';
+  overflow: visible;
+  /*problem for smaller screens !!!!!!*/
+  /* background-color: var(--colors-body); */
+  background: linear-gradient(to right, var(--colors-cutePink), var(--colors-cuteBlue));
+  /* font-family: 'Luminari'; */
   overflow-x: hidden;
   /* position: relative; */
 }
 
 .image {
   display: block;
-  width: 40px;
+  width: 3vw;
   height: auto;
+  margin: 0 0 0 20px;
 }
 
 .fonts {
@@ -41,12 +44,12 @@ html {
   gap: 10px !important;
 }
 
-.container-fluid {
+/* .container-fluid {
   display: flex !important;
   justify-content: space-between !important;
   align-items: center !important;
   height: 100% !important;
-}
+} */
 
 .navbar-nav {
   display: flex !important;
@@ -94,72 +97,92 @@ html {
   border: none !important;
 }
 
+@media (max-width: 991px) {
+
+  .offcanvas-body,
+  .offcanvas-header {
+    background-color: var(--colors-body);
+  }
+}
+
 /*------------------------------------*/
 
 .card-img-top {
-  width: 100%;
-  height: 280px; /* Set a fixed height for consistency */
-  object-fit: cover; /* Scale images to cover the area */
+  width: 100% !important;
+  height: 31vh !important;
+  /* Set a fixed height for consistency */
+  object-fit: cover !important;
+  /* Scale images to cover the area */
 }
 
 .card {
-  border: none;
-  height: 100%;
-  background-color: transparent;
-  color: white;
-  transition: background-color 0.3s ease;
+  border: none !important;
+  height: 100% !important;
+  background-color: transparent !important;
+  color: white !important;
+  transition: background-color 0.3s ease !important;
 }
 
 #main-container {
-  padding-top: 50px;
-  min-height: calc(100vh - 180px); /*120 + 10 + 50*/
+  padding-top: 3vh !important;
+  min-height: calc(100vh - 25vh) !important;
+  /*120 + 10 + 50*/
 }
 
 #confirm-button {
-  position: fixed;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 200px;
-  z-index: 999;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  /* position: fixed !important; fixed or no need ? */
+  border: none;
+  bottom: 10px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 200px !important;
+  z-index: 999 !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
 }
 
 /* Scale and shadow effect on click */
 #confirm-button:active {
-  transform: translateX(-50%) scale(0.95); /* Adjust scaling without affecting position */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow on click */
+  transform: translateX(-50%) scale(0.95) !important;
+  /* Adjust scaling without affecting position */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important; */
 }
 
 #confirm-button span {
-  position: absolute;
-  top: 50%;
-  left: 55%;
-  transform: translate(-50%, -50%);
-  font-size: 1rem;
-  font-weight: bold;
-  color: #fff;
+  position: absolute !important;
+  top: 50% !important;
+  left: 55% !important;
+  transform: translate(-50%, -50%) !important;
+  font-size: 1rem !important;
+  font-weight: bold !important;
+  color: #fff !important;
 }
 
 /* Hide paragraphs initially */
 .card-text {
-  display: none; /* Hide paragraphs by default */
-  transition: opacity 0.3s ease;
+  display: none !important;
+  /* Hide paragraphs by default */
+  transition: opacity 0.3s ease !important;
 }
 
 .card.active .card-text {
-  display: block; /* Show text when the card is active */
+  display: block !important;
+  /* Show text when the card is active */
 }
 
 .card.active {
-  background-color: var(--colors-input); /* Change background color for the active card */
+  background: rgba(255, 255, 255, 0.3);
+  /* Slightly less transparent */
+  box-shadow: 0 0 100px rgba(255, 255, 255, 0.3);
+  /* Add shadow to highlight */
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  /* Slightly more pronounced border */
 }
 
 /*------------------------------------*/
 
-/* .box {
-  position: absolute;
-  width: 35vw;
+.box {
+  position: absolute !important;
+  width: 35vw !important;
   height: 35vh;
 }
 
@@ -196,7 +219,7 @@ html {
     0 0 20vw var(--colors-pinky),
     0 0 35vw var(--colors-pinky),
     0 0 60vw var(--colors-pinky);
-} */
+}
 
 /* Blue Group */
 /* .box .groupb {
