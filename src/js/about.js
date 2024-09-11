@@ -1,1 +1,3 @@
-console.log("About PAGE");
+export function initAboutPage() {
+    console.log("About PAGE");
+}

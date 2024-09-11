@@ -1,1 +1,3 @@
-console.log("LANDING PAGE");
+export function initLandingPage() {
+    console.log("LANDING PAGE");
+}

@@ -1,1 +1,3 @@
-console.log("leaderboard PAGE");
+export function initLeaderboardPage() {
+    console.log("leaderboard PAGE");
+}
