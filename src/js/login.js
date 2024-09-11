@@ -103,17 +103,3 @@ function formDataToJson(formData) {
     });
     return JSON.stringify(obj);
 }
-
-// function createBubble() {
-//     const bubble = document.createElement('div');
-//     bubble.classList.add('bubble');
-//     bubble.style.left = `${Math.random() * 100}vw`;
-//     bubble.style.animationDelay = `${Math.random() * 10}s`;
-//     document.body.appendChild(bubble);
-
-//     setTimeout(() => {
-//         bubble.remove();
-//     }, 10000);
-// }
-
-// setInterval(createBubble, 300);

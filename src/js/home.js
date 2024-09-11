@@ -1,4 +1,5 @@
 // document.addEventListener("DOMContentLoaded", function () {
+import { navigateTo } from './main.js';
 const toggleBtn = document.getElementById("toggle-btn");
 const friendList = document.querySelector(".friend-list");
 const conversation = document.querySelector(".conversation");
@@ -62,20 +63,14 @@ document.getElementById('add-btn').addEventListener('click', function() {
         document.getElementById('add-friend-bar').style.display = 'block';
     }
 });
-// });
-// function createBubble() {
-//     const bubble = document.createElement('div');
-//     bubble.classList.add('bubble');
-//     bubble.style.left = `${Math.random() * 100}vw`;
-//     bubble.style.animationDelay = `${Math.random() * 10}s`;
-//     document.body.appendChild(bubble);
 
-//     setTimeout(() => {
-//         bubble.remove();
-//     }, 10000);
-// }
-
-// setInterval(createBubble, 300);
+// Add event listener to "Play" button
+const playButton = document.getElementById('playButton');
+if (playButton) {
+  playButton.addEventListener('click', function () {
+    navigateTo('leaderboard'); // Redirect to 'login' page when Play button is clicked
+  });
+}
 
 function handleResize() {
   if (window.innerWidth > 990)
