@@ -6,8 +6,8 @@ body, html {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    /* background-color: var(--colors-body); */
-    background: linear-gradient(to right, var(--colors-cutePink), var(--colors-cuteBlue));
+    background-color: var(--colors-body);
+    /* background: linear-gradient(to right, var(--colors-cutePink), var(--colors-cuteBlue)); */
     font-family:'Luminari';
 }
 
@@ -32,7 +32,7 @@ body, html {
 /* LOGO */
 .image { 
     display: block;
-    width: 3vw;
+    width: 40px;
     height: auto;
     margin: 0 0 0 20px;
 }

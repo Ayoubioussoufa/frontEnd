@@ -1,27 +1,61 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+.podium-container {
+  height: 50vh; /* Set to half the viewport height */
 }
 
-body {
+.podium {
   position: relative;
-  background-color: black;
+  width: 100%;
+  height: 30vh; /* Make it responsive based on viewport height */
+  background-color: #f2f2f2;
+  border-radius: 15px;
+  padding: 20px;
 }
 
-body::before {
-  content: '';
+.podium-rank {
+  width: 30vw; /* Scales with viewport width */
+  max-width: 150px;
+}
+
+.player-picture-container {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 1vw; /* Control the thickness of the glowing border */
-  height: 100vh; /* Full height of the screen */
-  pointer-events: none;
-  z-index: 9999;
-  box-shadow: 
-    0 0 20px rgba(255, 20, 147, 0.7),
-    0 0 40px rgba(255, 20, 147, 0.5),
-    0 0 80px rgba(255, 20, 147, 0.3),
-    0 0 160px rgba(255, 20, 147, 0.1);
+  top: -20%; /* Moves the player picture up above the podium */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.player-picture {
+  width: 10vw; /* Scales with viewport width */
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.wheats-container {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.wheat-left, .wheat-right {
+  width: 5vw;
+}
+
+.player-level, .player-wins {
+  font-size: 2vh; /* Responsive font size */
+}
+
+@media (max-width: 768px) {
+  .podium-rank {
+    width: 20vw;
+  }
+
+  .player-picture {
+    width: 15vw;
+  }
+
+  .wheat-left, .wheat-right {
+    width: 7vw;
+  }
 }
