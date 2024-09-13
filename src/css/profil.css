@@ -1,57 +1,55 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    overflow: visible;
-    background-color: var(--colors-body);
-    /* background: linear-gradient(to right, var(--colors-cutePink), var(--colors-cuteBlue)); */
-    font-family:'Luminari';
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  background-color: var(--colors-body);
+  /* background: linear-gradient(to right, var(--colors-cutePink), var(--colors-cuteBlue)); */
+  font-family: 'Luminari';
+  min-height: 100vh;
+  color: white !important;
 }
 
 /*------------------------------*/
 
 /* LOGO */
-.image { 
-    display: block;
-    width: 40px;
-    height: auto;
-    margin: 0 0 0 20px;
+.image {
+  display: block;
+  width: 40px;
+  height: auto;
+  margin: 0 0 0 20px;
 }
 
 .fonts {
-    font-size: 1.2rem;
-    /* font-weight: bold; */
-    color: #ffffff;
-    /* text-shadow: 
-        -1px -1px 0 #5c8795,  
-         1px -1px 0 #5c8795,
-        -1px  1px 0 #5c8795,
-         1px  1px 0 #5c8795; */
+  font-size: 1.2rem;
+  color: #ffffff;
 }
 
 /* NAVBAR */
 .navbar {
-    height: 120px !important;
-    border-bottom: 1px solid #f2bddf !important; /* Bottom border color */
-    /* background-color: transparent; */
+  height: 120px !important;
+  border-bottom: 1px solid #f2bddf !important;
+  /* Bottom border color */
+  /* background-color: transparent; */
 }
 
 .navbar .image {
-    height: 3rem !important;
-    margin-right: 1rem !important;
+  height: 3rem !important;
+  margin-right: 1rem !important;
 }
 
 .user {
-    margin-left: auto !important;
-    display: flex !important;
-    align-items: center !important;
-    gap: 10px !important;
+  margin-left: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
 }
 
 .container-fluid {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    height: 100% !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  height: 100% !important;
 }
 
 .navbar-nav {
@@ -61,102 +59,110 @@ body, html {
 }
 
 .nav-item a {
-  font-size: 1rem; /* Adjust font size */
-  text-align: center; /* katcentri f togglebar*/
+  font-size: 1rem;
+  /* Adjust font size */
+  text-align: center;
+  /* katcentri f togglebar*/
 }
 
 .navbar .navbar-toggler {
-    order: 0 !important;
-    margin-right: 20px !important;
+  order: 0 !important;
+  margin-right: 20px !important;
 }
 
 .navbar .sidebar .offcanvas-header .image {
-    height: 40px !important;
+  height: 40px !important;
 }
 
 .navbar .sidebar .offcanvas-body .nav-link {
-    /* color: #ff0000 !important; */
-    padding: 10px !important;
-    margin: 10px;
+  /* color: #ff0000 !important; */
+  padding: 10px !important;
+  margin: 10px;
 }
 
 .navbar .sidebar .offcanvas-body .nav-link:hover {
-    color: var(--colors-cyan) !important;
-    border-radius: 5px !important;
+  color: var(--colors-cyan) !important;
+  border-radius: 5px !important;
 }
 
 .navbar .user {
-    background: none !important;
-    border: none !important;
+  background: none !important;
+  border: none !important;
 }
 
 .navbar .user .customBack {
-    /* background-color: #007bff !important; */
-    color: #a6009e !important; /*user !!!!*/
-    font-weight: bold !important;
-    border: none !important;
+  /* background-color: #007bff !important; */
+  color: #a6009e !important;
+  /*user !!!!*/
+  font-weight: bold !important;
+  border: none !important;
 }
 
 @media (max-width: 991px) {
-    .offcanvas-body, .offcanvas-header  {
-        background-color: var(--colors-body);
-    }
+
+  .offcanvas-body,
+  .offcanvas-header {
+    background-color: var(--colors-body);
+  }
 }
 
 @media (max-width: 989px) {
-    .contain {
-      flex-direction: column;
-    }
-    
-    .friend-list, .conversation {
-      width: calc(100% - 66px);
-      margin: 20px 0;
-    }
+  .contain {
+    flex-direction: column;
+  }
 
-    .toggle-btn {
-      width: 10rem;
-      display: block;
-      position: fixed;
-      bottom: 2rem;
-      left: 2rem;
-      z-index: 3;
-    }
+  .friend-list,
+  .conversation {
+    width: calc(100% - 66px);
+    margin: 20px 0;
+  }
 
-    .Text {
-        display: none;
-    }
-/* 
+  .toggle-btn {
+    width: 10rem;
+    display: block;
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 3;
+  }
+
+  .Text {
+    display: none;
+  }
+
+  /* 
     .play {
         position: fixed;
         left: 20%;
         top: 20%;
         transform: translate(-50%, -50%);
         z-index: 0;
-      } later on !!!!! */ 
+      } later on !!!!! */
+}
+
+@media (min-width: 990px) {
+  .contain {
+    flex-direction: row;
   }
-  
-  @media (min-width: 990px) {
-    .contain {
-      flex-direction: row;
-    }
 
-    .friend-list {
-        display: block;
-    }
-    
-    .conversation {
-      /* display: block; */
-      position: static; /* Reset positioning */
-    }
-    
-    .toggle-btn {
-      display: none;
-    }
+  .friend-list {
+    display: block;
+  }
 
-    .Text {
-        font-size: 3vw;
-        left: 30%;
-      }
+  .conversation {
+    /* display: block; */
+    position: static;
+    /* Reset positioning */
+  }
+
+  .toggle-btn {
+    display: none;
+  }
+
+  .Text {
+    font-size: 3vw;
+    left: 30%;
+  }
 }
 
 
@@ -166,50 +172,57 @@ body, html {
     }
 } */
 
-  .box {
-    position: absolute;
-    width: 35vw; /* Relative to the viewport width */
-    height: 35vh; /* Relative to the viewport height */
-  }
-  
-  /* Pink Group */
-  .box .group {
-    position: absolute;
-    width: 35vw; /* Same as .box width */
-    height: 35vh; /* Same as .box height */
-    top: -100%; /* Leave as percentage if based on the container */
-    left: -50%; /* Leave as percentage if based on the container */
-  }
-  
-  .box .ellipse-wrapper {
-    position: absolute;
-    height: 35vh;
-    background-color: var(--colors-pinky);
-    border-width: 15vw 14vh; /* Adjusted to use vw and vh units */
-    box-shadow: 0 0 3vw var(--colors-pinky), 
-                0 0 6vw var(--colors-pinky), 
-                0 0 10vw var(--colors-pinky),
-                0 0 20vw var(--colors-pinky), 
-                0 0 35vw var(--colors-pinky), 
-                0 0 60vw var(--colors-pinky);
-  }
-  
-  .box .ellipse {
-    position: absolute;
-    width: 35vw;
-    height: 35vh;
-    background-color: var(--colors-pinky);
-    border-width: 15vw 14vh;
-    box-shadow: 0 0 3vw var(--colors-pinky), 
-                0 0 6vw var(--colors-pinky), 
-                0 0 10vw var(--colors-pinky),
-                0 0 20vw var(--colors-pinky), 
-                0 0 35vw var(--colors-pinky), 
-                0 0 60vw var(--colors-pinky);
-  }
-  
-  /* Blue Group */
-  /* .box .groupb {
+.box {
+  position: absolute;
+  width: 35vw;
+  /* Relative to the viewport width */
+  height: 35vh;
+  /* Relative to the viewport height */
+}
+
+/* Pink Group */
+.box .group {
+  position: absolute;
+  width: 35vw;
+  /* Same as .box width */
+  height: 35vh;
+  /* Same as .box height */
+  top: -100%;
+  /* Leave as percentage if based on the container */
+  left: -50%;
+  /* Leave as percentage if based on the container */
+}
+
+.box .ellipse-wrapper {
+  position: absolute;
+  height: 35vh;
+  background-color: var(--colors-pinky);
+  border-width: 15vw 14vh;
+  /* Adjusted to use vw and vh units */
+  box-shadow: 0 0 3vw var(--colors-pinky),
+    0 0 6vw var(--colors-pinky),
+    0 0 10vw var(--colors-pinky),
+    0 0 20vw var(--colors-pinky),
+    0 0 35vw var(--colors-pinky),
+    0 0 60vw var(--colors-pinky);
+}
+
+.box .ellipse {
+  position: absolute;
+  width: 35vw;
+  height: 35vh;
+  background-color: var(--colors-pinky);
+  border-width: 15vw 14vh;
+  box-shadow: 0 0 3vw var(--colors-pinky),
+    0 0 6vw var(--colors-pinky),
+    0 0 10vw var(--colors-pinky),
+    0 0 20vw var(--colors-pinky),
+    0 0 35vw var(--colors-pinky),
+    0 0 60vw var(--colors-pinky);
+}
+
+/* Blue Group */
+/* .box .groupb {
     position: absolute;
     width: 35vw;
     height: 35vh;
@@ -243,138 +256,206 @@ body, html {
                 0 0 35vw var(--colors-cyan), 
                 0 0 60vw var(--colors-cyan);
   } */
-  /*------------------------------------*/
+/*------------------------------------*/
 
-  .left-container, .right-container {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    height: 100%;
-  }
-  
-  .profile-picture {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  
-  .username {
-    font-size: 1.8em;
-  }
-  
-  .last-played {
-    color: #6c757d;
-    font-size: 0.9em;
-  }
-  
-  .about-me {
-    font-size: 1.2em;
-    margin-bottom: 0;
-  }
-  
-  .section-title {
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-  }
-  
-  .achievements-container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .achievement-item {
-    text-align: center;
-    margin-bottom: 15px;
-  }
-  
-  .achievement-icon {
-    width: 64px;
-    height: 64px;
-    margin-bottom: 5px;
-  }
-  
-  .scoreboard-section {
-    border: 1px solid #dee2e6;
-    border-radius: 10px;
-  }
-  
-  .stat {
-    font-size: 2em;
-    font-weight: bold;
-    color: #007bff;
-  }
-  
-  .level-pentagon {
-    width: 80px;
-    height: 80px;
-    background-color: #007bff;
-    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-  }
-  
-  .level-number {
-    color: white;
-    font-size: 1.8em;
-    font-weight: bold;
-  }
-  
-  .friends-container {
+.container {
+  max-height: 90vh;
+}
+
+.left-container,
+.right-container {
+  background-color: transparent;
+  height: calc(100vh - 120px);
+  /* Make full height minus navbar */
+}
+
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.username {
+  font-size: 1.8em;
+}
+
+.last-played {
+  color: #6c757d;
+  font-size: 0.9em;
+}
+
+.about-me {
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+
+.section-title {
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+}
+
+/* .achievements-section {
     max-height: 300px;
     overflow-y: auto;
+  } */
+
+.achievements-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 21vh;
+  /**/
+  overflow-y: auto;
+  /**/
+}
+
+.achievement-item {
+  text-align: center;
+  margin-bottom: 15px;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.achievement-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 5px;
+}
+
+.scoreboard-section {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.stat {
+  font-size: 2em;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.level-pentagon {
+  width: 80px;
+  height: 80px;
+  background-color: #007bff;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.level-number {
+  color: white;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.level-label {
+  display: inline-block;
+  padding: 2px 8px;
+  border: 1px solid #007bff;
+  border-radius: 12px;
+  font-size: 0.9em;
+  color: #007bff;
+}
+
+.friends-container {
+  max-height: 35vh;
+  overflow-y: auto;
+}
+
+.friend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.friend-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.friend-name {
+  margin-bottom: 0;
+}
+
+.friend-status {
+  font-size: 0.8em;
+}
+
+.online {
+  color: #28a745;
+}
+
+.offline {
+  color: #dc3545;
+}
+
+/* Custom scrollbar for achievements and friends list */
+.achievements-container::-webkit-scrollbar,
+.friends-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.achievements-container::-webkit-scrollbar-track,
+.friends-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.achievements-container::-webkit-scrollbar-thumb,
+.friends-container::-webkit-scrollbar-thumb {
+  background: #00ffff;
+  border-radius: 10px;
+}
+
+.achievements-container::-webkit-scrollbar-thumb:hover,
+.friends-container::-webkit-scrollbar-thumb:hover {
+  background: #00cccc;
+}
+
+@media (min-width: 992px) {
+  .row {
+    position: relative !important;
   }
-  
-  .friend-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .friend-picture {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  
-  .friend-name {
-    margin-bottom: 0;
-  }
-  
-  .friend-status {
-    font-size: 0.8em;
-  }
-  
-  .online {
-    color: #28a745;
-  }
-  
-  .offline {
-    color: #dc3545;
-  }
-  
-  @media (min-width: 992px) {
-    .left-container::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        width: 1px;
-        background-color: #dee2e6;
+
+.row::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px; /* Thin vertical line */
+    background-color: white;
+    z-index: 0; /* Ensure the line is above the columns */
+}
+
+/* Ensure the line is only visible on larger screens */
+@media (min-width: 992px) {
+    .row::before {
+        display: block; /* Show the vertical line on screens wider than 992px */
     }
-  
-    .achievements-container {
-        display: flex;
-        flex-wrap: wrap;
+}
+
+@media (max-width: 991px) {
+    .row::before {
+        display: none; /* Hide the vertical line on screens smaller than 992px */
     }
-  
-    .achievement-item {
-        flex: 0 0 33.333333%;
-        max-width: 33.333333%;
-    }
+}
+
+  .achievement-item {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
   }
+}
+/* Adjust the columns to account for the line */
+.col-lg-6 {
+  position: relative !important;
+  z-index: 2 !important; /* Ensure columns are above the vertical line */
+}
