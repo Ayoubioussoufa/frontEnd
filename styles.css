@@ -1,0 +1,137 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.left-container, .right-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  height: 100%;
+}
+
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.username {
+  font-size: 1.8em;
+}
+
+.last-played {
+  color: #6c757d;
+  font-size: 0.9em;
+}
+
+.about-me {
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+
+.section-title {
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.achievements-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.achievement-item {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.achievement-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 5px;
+}
+
+.scoreboard-section {
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+}
+
+.stat {
+  font-size: 2em;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.level-pentagon {
+  width: 80px;
+  height: 80px;
+  background-color: #007bff;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.level-number {
+  color: white;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.friends-container {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.friend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.friend-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.friend-name {
+  margin-bottom: 0;
+}
+
+.friend-status {
+  font-size: 0.8em;
+}
+
+.online {
+  color: #28a745;
+}
+
+.offline {
+  color: #dc3545;
+}
+
+@media (min-width: 992px) {
+  .left-container::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 1px;
+      background-color: #dee2e6;
+  }
+
+  .achievements-container {
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+  .achievement-item {
+      flex: 0 0 33.333333%;
+      max-width: 33.333333%;
+  }
+}

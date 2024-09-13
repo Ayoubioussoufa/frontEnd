@@ -1,10 +1,10 @@
-document.addEventListener('DOMContentLoaded', function() {
+export function initProfilPage() {
     const editProfileBtn = document.getElementById('editProfileBtn');
     const achievementsContainer = document.getElementById('achievementsContainer');
     const friendsContainer = document.getElementById('friendsContainer');
 
     // Edit Profile Button Click Event
-    editProfileBtn.addEventListener('click', function() {
+    editProfileBtn.addEventListener('click', function () {
         alert('Edit profile functionality to be implemented');
     });
 
@@ -23,9 +23,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const div = document.createElement('div');
         div.className = 'col-6 col-md-4 achievement-item';
         div.innerHTML = `
-            <img src="${achievement.icon}" alt="${achievement.name}" class="achievement-icon">
-            <p>${achievement.name}</p>
-        `;
+                <img src="${achievement.icon}" alt="${achievement.name}" class="achievement-icon">
+                <p>${achievement.name}</p>
+            `;
         achievementsContainer.appendChild(div);
     });
 
@@ -44,12 +44,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const div = document.createElement('div');
         div.className = 'friend-item';
         div.innerHTML = `
-            <img src="${friend.picture}" alt="${friend.name}" class="friend-picture">
-            <div>
-                <p class="friend-name">${friend.name}</p>
-                <span class="friend-status ${friend.status}">${friend.status}</span>
-            </div>
-        `;
+                <img src="${friend.picture}" alt="${friend.name}" class="friend-picture">
+                <div>
+                    <p class="friend-name">${friend.name}</p>
+                    <span class="friend-status ${friend.status}">${friend.status}</span>
+                </div>
+            `;
         friendsContainer.appendChild(div);
     });
-});
+}
