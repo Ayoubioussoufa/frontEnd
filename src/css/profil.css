@@ -344,8 +344,8 @@ html {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  position: relative;
-  z-index: 1;
+  /* position: relative;
+  z-index: 1; */
 }
 
 .level-number {
@@ -425,30 +425,16 @@ html {
     position: relative !important;
   }
 
-.row::before {
+  .container > .row::after{ /*4 hours looking for the answer :) .container > */
     content: '';
     position: absolute;
+    height: 100%; /* Span the entire height of the row */
     top: 0;
-    bottom: 0;
     left: 50%;
-    width: 1px; /* Thin vertical line */
+    width: 1px;
     background-color: white;
-    z-index: 0; /* Ensure the line is above the columns */
+    z-index: 0;
 }
-
-/* Ensure the line is only visible on larger screens */
-@media (min-width: 992px) {
-    .row::before {
-        display: block; /* Show the vertical line on screens wider than 992px */
-    }
-}
-
-@media (max-width: 991px) {
-    .row::before {
-        display: none; /* Hide the vertical line on screens smaller than 992px */
-    }
-}
-
   .achievement-item {
     flex: 0 0 33.333333%;
     max-width: 33.333333%;
