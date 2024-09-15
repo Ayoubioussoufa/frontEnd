@@ -15,12 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
         { name: '1000 Games Played', icon: '/placeholder.svg?height=50&width=50' },
         { name: 'Tournament Winner', icon: '/placeholder.svg?height=50&width=50' },
         { name: 'Legendary Player', icon: '/placeholder.svg?height=50&width=50' },
-        { name: 'Social Butterfly', icon: '/placeholder.svg?height=50&width=50' },
-        { name: 'Master Strategist', icon: '/placeholder.svg?height=50&width=50' },
-        { name: 'Level 50 Warrior', icon: '/placeholder.svg?height=50&width=50' },
-        { name: '1000 Games Played', icon: '/placeholder.svg?height=50&width=50' },
-        { name: 'Tournament Winner', icon: '/placeholder.svg?height=50&width=50' },
-        { name: 'Legendary Player', icon: '/placeholder.svg?height=50&width=50' },
         { name: 'Social Butterfly', icon: '/placeholder.svg?height=50&width=50' }
     ];
 

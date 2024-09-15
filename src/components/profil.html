@@ -17,13 +17,13 @@
     <!-- fluid to be added later on -->
     <div class="container-fluid">
       <!-- Logo -->
-      <a href="#"><img class="image" src="src/assets/home/logo.svg" alt="logopng"></a>
+      <a href="#home"><img class="image" src="src/assets/home/logo.svg" alt="logopng"></a>
       <!-- SideBar -->
       <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
         aria-labelledby="offcanvasNavbarLabel">
         <!-- SideBar Header -->
         <div class="offcanvas-header text-white border-bottom shadow-none">
-          <a href="#"><img class="image" src="src/assets/home/logo.svg" alt="logopng"></a>
+          <a href="#home"><img class="image" src="src/assets/home/logo.svg" alt="logopng"></a>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <!-- SideBar Body -->
@@ -53,7 +53,7 @@
   
           </div>
           <div class="UserProfile">
-            <a href="#" class="text-white text-decoration-one px-3 py-1 rounded-4 btn customBack"><strong>USER
+            <a href="#profil" class="text-white text-decoration-one px-3 py-1 rounded-4 btn customBack"><strong>USER
                 HERE</strong></a>
           </div>
         </div>
@@ -84,8 +84,11 @@
                 </div>
                 
                 <!-- Achievements Section -->
-                <div class="achievements-section mt-4 p-4 flex-grow-1">
-                    <h3 class="section-title">Achievements</h3>
+                <div class="achievements-section mt-2 p-4 flex-grow-1">
+                  <div class="title-container">
+                    <img src="src/assets/profil/achievementIcon.png" alt="Achievements Icon" class="achievement-icon">
+                    <h3>Best Achievements</h3>
+                </div>
                     <div class="achievements-container" id="achievementsContainer">
                         <!-- Achievements will be dynamically added here -->
                     </div>
@@ -105,7 +108,7 @@
                     <div class="row text-center mt-4">
                         <div class="col-4">
                           <p class="stat">150</p>
-                          <h4>Wins</h4>
+                          <h4 class="stylingColor">Wins</h4>
                         </div>
                         <div class="col-4">
                             <div class="level-pentagon">
@@ -115,13 +118,13 @@
                         </div>
                         <div class="col-4">
                           <p class="stat">75</p>
-                          <h4>Losses</h4>
+                          <h4 class="stylingColor">Losses</h4>
                         </div>
                     </div>
                 </div>
 
                 <!-- Friends List Section -->
-                <div class="friends-section p-4 flex-grow-1"> <!--mt-4-->
+                <div class="friends-section mt-4 p-4 flex-grow-1"> <!--mt-4-->
                     <h3 class="section-title">Friends</h3>
                     <div class="friends-container" id="friendsContainer">
                         <!-- Friends will be dynamically added here -->

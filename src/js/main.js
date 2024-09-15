@@ -1,20 +1,8 @@
 const contentDiv = document.getElementById('app');
 document.addEventListener('DOMContentLoaded', function () {
-
   // Initial route based on hash or default to landing page
   const route = window.location.hash.slice(1) || 'landing';
   loadPage(route);
-
-  // window.addEventListener('popstate', (event) => {
-  //   const page = window.location.hash.slice(1) || 'landing';
-  //   loadPage(page);
-  // });
-
-  // Handle browser Back/Forward button clicks with popstate event
-  // window.addEventListener('popstate', (event) => {
-  //   const page = (event.state && event.state.page) || window.location.hash.slice(1) || 'landing';
-  //   loadPage(page);
-  // });
 });
 
 // Function to handle navigation
@@ -40,15 +28,6 @@ function loadPage(page) {
   if (existingLink) {
     existingLink.remove(); // Remove the old CSS file
   }
-
-  // Remove existing script if necessary
-  // const existingScript = document.getElementById('dynamic-script');
-  // console.log("BEFORE ", existingScript);
-  // if (existingScript) {
-  //   existingScript.remove(); // Remove the old script
-  // }
-  // console.log("AFTER: ", document.getElementById('dynamic-script'));
-
 
   // Dynamically load CSS
   const link = document.createElement('link');
@@ -116,14 +95,6 @@ function loadPage(page) {
         contentDiv.innerHTML = '<h1>404 Page Not Found</h1>';
       });
   }
-
-  // // Dynamically load JavaScript
-  // const script = document.createElement('script');
-  // script.src = `src/js/${page}.js`; // Dynamic JS based on page
-  // script.id = 'dynamic-script'; // Assign an ID to the script tag for future removal
-  // script.type = "module";
-  // document.body.appendChild(script);
-  // console.log("AFTER ADDING IT : ", document.getElementById('dynamic-script'));
 }
 
 

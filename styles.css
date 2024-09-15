@@ -1,12 +1,13 @@
 body {
   background-color: #f8f9fa;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 
 .container {
-  max-height: 90vh;
+  max-height: 100vh;
 }
 
 .left-container, .right-container {
@@ -41,29 +42,28 @@ body {
   margin-bottom: 15px;
 }
 
-/* .achievements-section {
-  max-height: 300px;
-  overflow-y: auto;
-} */
-
-.achievements-container {
+.achievements-section, .friends-section {
+  flex-grow: 1;
   display: flex;
-  flex-wrap: wrap;
-  max-height: 250px; /**/
-  overflow-y: auto; /**/
+  flex-direction: column;
+}
+
+.achievements-container, .friends-container {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-right: 10px;
 }
 
 .achievement-item {
-  text-align: center;
-  margin-bottom: 15px;
-  flex: 0 0 50%;
-  max-width: 50%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .achievement-icon {
-  width: 64px;
-  height: 64px;
-  margin-bottom: 5px;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
 }
 
 .scoreboard-section {
@@ -104,11 +104,6 @@ body {
   color: #007bff;
 }
 
-.friends-container {
-  max-height: 300px;
-  overflow-y: auto;
-}
-
 .friend-item {
   display: flex;
   align-items: center;
@@ -128,14 +123,23 @@ body {
 
 .friend-status {
   font-size: 0.8em;
+  display: flex;
+  align-items: center;
 }
 
-.online {
-  color: #28a745;
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 5px;
 }
 
-.offline {
-  color: #dc3545;
+.online .status-indicator {
+  background-color: #28a745;
+}
+
+.offline .status-indicator {
+  background-color: #dc3545;
 }
 
 /* Custom scrollbar for achievements and friends list */
@@ -174,10 +178,5 @@ body {
       left: 50%;
       width: 1px;
       background-color: white;
-  }
-
-  .achievement-item {
-      flex: 0 0 33.333333%;
-      max-width: 33.333333%;
   }
 }
