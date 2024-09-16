@@ -421,8 +421,16 @@ html {
   margin-right: 5px;
 }
 
+.online {
+  color: var(--colors-online) !important;
+}
+
+.offline {
+  color: var(--colors-offline) !important;
+}
+
 .online .status-indicator {
-  background-color: #28a745;
+  background-color: var(--colors-online);
 }
 
 .offline .status-indicator {
@@ -476,4 +484,49 @@ html {
 .col-lg-6 {
   position: relative !important;
   z-index: 2 !important; /* Ensure columns are above the vertical line */
+}
+
+/*-----------------------------------------------*/
+
+.match-history {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #1a1a1a;
+  border: 2px solid #333;
+  border-radius: 15px;
+  padding: 20px;
+}
+.match-card {
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s;
+  margin-bottom: 15px;
+}
+.match-card:hover {
+  transform: translateY(-5px);
+  background-color: #3a3a3a;
+}
+.player-icon, .enemy-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.score {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  white-space: nowrap;
+}
+.winner {
+  color: #28a745;
+}
+.loser {
+  color: #dc3545;
+}
+.player-name, .enemy-name {
+  color: #fff;
+  font-size: 1rem;
+  margin: 0;
 }
