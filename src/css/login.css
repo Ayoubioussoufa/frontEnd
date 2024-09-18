@@ -182,6 +182,7 @@ body{
     font-size: 13px !important;
     width: 100% !important;
     outline: none !important;
+    color: white;
 }
 
 .passwordInput {

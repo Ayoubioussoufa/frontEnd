@@ -470,7 +470,7 @@ html {
     position: absolute;
     height: 100%; /* Span the entire height of the row */
     top: 0;
-    left: 50%;
+    left: 66%;
     width: 1px;
     background-color: white;
     z-index: 0;
