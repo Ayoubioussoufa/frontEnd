@@ -1,23 +1,22 @@
-.box {
+/* .box {
   position: absolute;
-  width: 35vw; /* Relative to the viewport width */
-  height: 35vh; /* Relative to the viewport height */
+  width: 35vw;
+  height: 35vh;
 }
 
-/* Pink Group */
 .box .group {
   position: absolute;
-  width: 35vw; /* Same as .box width */
-  height: 35vh; /* Same as .box height */
-  top: -100%; /* Leave as percentage if based on the container */
-  left: -50%; /* Leave as percentage if based on the container */
+  width: 35vw;
+  height: 35vh;
+  top: -100%;
+  left: -50%;
 }
 
 .box .ellipse-wrapper {
   position: absolute;
   height: 35vh;
   background-color: var(--colors-pinky);
-  border-width: 15vw 14vh; /* Adjusted to use vw and vh units */
+  border-width: 15vw 14vh;
   box-shadow: 0 0 3vw var(--colors-pinky), 
               0 0 6vw var(--colors-pinky), 
               0 0 10vw var(--colors-pinky),
@@ -38,10 +37,10 @@
               0 0 20vw var(--colors-pinky), 
               0 0 35vw var(--colors-pinky), 
               0 0 60vw var(--colors-pinky);
-}
+} */
 
 /* Blue Group */
-.box .groupb {
+/* .box .groupb {
   position: absolute;
   width: 35vw;
   height: 35vh;
@@ -74,7 +73,7 @@
               0 0 20vw var(--colors-cyan), 
               0 0 35vw var(--colors-cyan), 
               0 0 60vw var(--colors-cyan);
-}
+} */
 
 /* General Navbar Styling */
 .navbar-custom {
@@ -98,6 +97,8 @@ body {
   overflow: hidden;
   font-family: "Abril Fatface-Regular", Helvetica;
   font-size: 1.5rem; /* Base font size for scaling */
+  background: radial-gradient(circle at top left, rgb(213, 5, 255) 1%, transparent 30%),
+  radial-gradient(circle at bottom left, rgb(15, 195, 231) 1%, transparent 30%);
 }
 
 h1 {

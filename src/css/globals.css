@@ -24,9 +24,9 @@
   --colors-blue-violet-800: rgba(58, 46, 165, 1);
   --colors-blue-violet-900: rgba(52, 44, 131, 1);
   --colors-blue-violet-950: rgba(31, 26, 76, 1);
-  --colors-cyan: #00dff8;
-  --colors-pinky: #d505ff;
-  --colors-body: rgb(27, 2, 54);
+  --colors-cyan: rgb(0, 223, 248);
+  --colors-pinky: rgb(213, 5, 255);
+  --colors-body: #1b0236;
   --colors-input: #202056;
 
   --colors-cuteBlue: #4169e1;
@@ -47,6 +47,11 @@ html, body {
   height: 100vh;
 }
 
+@media only screen and (min-width: 1024px) {
+  body {
+      overflow: hidden; /* Prevent zooming effects via scrolling */
+  }
+}
 
 /* #app {
   z-index: 1;
